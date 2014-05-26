@@ -8,28 +8,25 @@ Dark color: #333333
 
 /**** GLOBAL STYLES ****/
 html {
+	font-size:16px;
 }
 
 body {
 	background:#f5f5f5;
+	font: 1/1.5 Arial, Helvetica, sans-serif;
 }
 
 a {
-	color:;
+	color:#005191;
 }
 	a:hover {
-		color:#333;
+		color:#004174;
 	}
 
 .caps {
 	text-transform: uppercase;
 	letter-spacing: 0.125em;
 	font-size:90%;
-	font-weight: bold;
-}
-
-.bare-list {
-	list-style: none;
 }
 
 .nav {
@@ -38,7 +35,7 @@ a {
 }
 	.nav li {
 		float:left;
-		margin-left:20px;
+		margin-left:5px;
 		list-style: none;
 	}
 
@@ -46,20 +43,64 @@ a {
 			margin-left:0;
 		}
 
-.tiles-container {
+.panels-container {
 	margin:40px 0;
 }
+
+	.news-entry {
+		margin-top:8px !important;
+	}
 
 	.panel + .panel {
 		border-left:0;
 	}
 
+	.panels-container .panel {
+		margin:0;
+		margin-top:-1px;
+	}
+
+	.tickets {
+		padding:40px 30px;
+		background:#005191;
+	}
+
+		.panels-container .tickets h3 {
+			color:white;
+		}
+
+	.panel .game-date {
+		margin:20px 0;
+		font-size:2.618em;
+	}
+
+	.news-feed, .twitter-feed {
+		position:relative;
+		overflow:hidden;
+		height:260px;
+	}
+		.curtain {
+			position:absolute;
+			bottom:0;
+			left:0;
+			right:0;
+			background:url(images/vittoning.png) repeat-x bottom left;
+			height:40px;
+		}
+
+.hero-image {
+	margin-bottom:-160px;
+}
+	.hero-image img {
+		width:100%;
+	}
 
 /**** HEADER ****/
 .header {
 	background:white;
 	padding:20px 0;
 	border-bottom:1px solid #ddd; //temporary, used for setup
+	margin-bottom:-1px;
 }
 	.header a {
 		color:;

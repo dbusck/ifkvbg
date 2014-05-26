@@ -1907,7 +1907,7 @@ meta.foundation-mq-topbar {
   .panel > :last-child {
     margin-bottom: 0; }
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6, .panel p {
-    color: #333333; }
+     }
   .panel h1, .panel h2, .panel h3, .panel h4, .panel h5, .panel h6 {
     line-height: 1;
     margin-bottom: 0.625rem; }
@@ -1916,10 +1916,10 @@ meta.foundation-mq-topbar {
   .panel.callout {
     border-style: solid;
     border-width: 1px;
-    border-color: #b3deff;
+    border-color: #005191;
     margin-bottom: 1.25rem;
     padding: 1.25rem;
-    background: #e9f5ff; }
+    background: #005191; }
     .panel.callout > :first-child {
       margin-top: 0; }
     .panel.callout > :last-child {
@@ -1932,7 +1932,7 @@ meta.foundation-mq-topbar {
       .panel.callout h1.subheader, .panel.callout h2.subheader, .panel.callout h3.subheader, .panel.callout h4.subheader, .panel.callout h5.subheader, .panel.callout h6.subheader {
         line-height: 1.4; }
     .panel.callout a:not(.button) {
-      color: #005191; }
+      color: white; }
   .panel.radius {
     border-radius: 0px; }
 
@@ -2698,16 +2698,16 @@ p {
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: bold;
   font-style: normal;
-  color: #eeeeee;
+  color: #005191;
   text-rendering: optimizeLegibility;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem;
   line-height: 1.4; }
   h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
     font-size: 60%;
-    color: #f4f4f4;
+    color: #555555;
     line-height: 0; }
 
 h1 {
@@ -2730,7 +2730,7 @@ h6 {
 
 .subheader {
   line-height: 1.4;
-  color: #f4f4f4;
+  color: #555555;
   font-weight: normal;
   margin-top: 0.2rem;
   margin-bottom: 0.5rem; }
@@ -2846,7 +2846,7 @@ blockquote {
 blockquote,
 blockquote p {
   line-height: 1.6;
-  color: #f4f4f4; }
+  color: #555555; }
 
 /* Microformats */
 .vcard {
