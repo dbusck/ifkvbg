@@ -1223,8 +1223,7 @@ meta.foundation-mq-topbar {
 
 /* Wrapped around .top-bar to contain to grid width */
 .contain-to-grid {
-  width: 100%;
-  background: #333333; }
+  width: 100%; }
   .contain-to-grid .top-bar {
     margin-bottom: 0; }
 
@@ -1252,7 +1251,6 @@ meta.foundation-mq-topbar {
   height: 45px;
   line-height: 45px;
   position: relative;
-  background: #333333;
   margin-bottom: 0; }
   .top-bar ul {
     margin-bottom: 0;
@@ -1343,7 +1341,6 @@ meta.foundation-mq-topbar {
     width: 100%;
     height: auto;
     display: block;
-    background: #333333;
     font-size: 16px;
     margin: 0; }
   .top-bar-section .divider,
@@ -1361,8 +1358,7 @@ meta.foundation-mq-topbar {
     font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
     font-size: 0.8125rem;
     font-weight: normal;
-    text-transform: none;
-    background: #333333; }
+    text-transform: none; }
     .top-bar-section ul li > a.button {
       font-size: 0.8125rem;
       padding-right: 15px;
@@ -1558,10 +1554,9 @@ meta.foundation-mq-topbar {
       color: white; }
     .top-bar-section li:not(.has-form) a:not(.button) {
       padding: 0 15px;
-      line-height: 45px;
-      background: #333333; }
+      line-height: 45px; }
       .top-bar-section li:not(.has-form) a:not(.button):hover {
-        background: #272727; }
+         }
     .top-bar-section li.active:not(.has-form) a:not(.button) {
       padding: 0 15px;
       line-height: 45px;
@@ -1577,7 +1572,7 @@ meta.foundation-mq-topbar {
         width: 0;
         height: 0;
         border: inset 5px;
-        border-color: rgba(255, 255, 255, 0.4) transparent transparent transparent;
+        border-color: rgba(0, 81,145, 1) transparent transparent transparent;
         border-top-style: solid;
         margin-top: -2.5px;
         top: 22.5px; }
@@ -1903,10 +1898,10 @@ meta.foundation-mq-topbar {
 .panel {
   border-style: solid;
   border-width: 1px;
-  border-color: #d8d8d8;
+  border-color: #005191;
   margin-bottom: 1.25rem;
   padding: 1.25rem;
-  background: #f2f2f2; }
+  background: white; }
   .panel > :first-child {
     margin-top: 0; }
   .panel > :last-child {

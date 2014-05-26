@@ -1,0 +1,78 @@
+/* 
+
+Blue color: #005191
+Light gray: #f5f5f5
+Dark color: #333333
+
+*/
+
+/**** GLOBAL STYLES ****/
+html {
+}
+
+body {
+	background:#f5f5f5;
+}
+
+a {
+	color:;
+}
+	a:hover {
+		color:#333;
+	}
+
+.caps {
+	text-transform: uppercase;
+	letter-spacing: 0.125em;
+	font-size:90%;
+	font-weight: bold;
+}
+
+.bare-list {
+	list-style: none;
+}
+
+.nav {
+	margin:0;
+	font-weight: bold;
+}
+	.nav li {
+		float:left;
+		margin-left:20px;
+		list-style: none;
+	}
+
+		.nav li:first-child {
+			margin-left:0;
+		}
+
+.tiles-container {
+	margin:40px 0;
+}
+
+	.panel + .panel {
+		border-left:0;
+	}
+
+
+/**** HEADER ****/
+.header {
+	background:white;
+	padding:20px 0;
+	border-bottom:1px solid #ddd; //temporary, used for setup
+}
+	.header a {
+		color:;
+	}
+
+	.header .logo {
+		display:block;
+		width:65px;
+		margin-bottom:-19px;
+	}
+
+	.header .nav {
+		margin-top:12px;
+	}
+
+/**** FOOTER ****/
