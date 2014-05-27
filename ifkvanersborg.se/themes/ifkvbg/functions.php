@@ -2,11 +2,15 @@
 
 // Add scripts
 if( !is_admin()){
+	wp_register_script('modernizr', (get_template_directory_uri() . "/js/vendor/modernizr.js"), false, '1', false);
+	wp_enqueue_script('modernizr');
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"), false, '1.10.2', true);
 	wp_enqueue_script('jquery');
-	wp_register_script('modernizr', (get_template_directory_uri() . "/js/vendor/modernizr.js"), false, '1', false);
-	wp_enqueue_script('modernizr');
+	wp_register_script('foundation', (get_template_directory_uri() . "/js/min/foundation.min.js"), false, '1', true);
+	wp_enqueue_script('foundation');
+	wp_register_script('foundation_dropdown', (get_template_directory_uri() . "/js/foundation/foundation.dropdown.js"), false, '1', true);
+	wp_enqueue_script('foundation_dropdown');
 }
 
 // Google Analytics in footer

@@ -203,10 +203,10 @@ a {
 				margin-top:-1px;
 			}
 
-			.panels-container .panel {
+			.panel {
 				border-left:0;
 			}
-				.panels-container .panel:first-child {
+				.panel:first-child {
 					border-left:1px solid #005191;
 				}
 
@@ -223,10 +223,6 @@ a {
 		.instagram-feed .instagram-image {
 			width:33.33333%;
 			margin-top:1px;
-		}
-
-		.panel + .panel {
-			border-left:0;
 		}
 	}
 
