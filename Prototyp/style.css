@@ -31,48 +31,74 @@ a {
 
 .nav {
 	margin:0;
-	font-weight: bold;
 }
 	.nav li {
 		float:left;
 		list-style: none;
 	}
 
-.panels-container {
-	margin:40px;
+		.nav .has-dropdown:hover {
+			background:#005191;
+		}
+
+			.nav .has-dropdown:hover a {
+				color:white;
+			}
+
+				.nav .has-dropdown:hover a:after {
+					border-top-color:white;
+				}
+
+.hero-image {
+	position:relative;
 }
-
-	.panels-container .panel {
-		border-left:0;
-	}
-	.panels-container .panel:first-child {
-		border-left:1px solid;
-	}
-	
-	@media screen and (min-width: 40.063em) {
-		.news-feed, .twitter-feed, .blurb {
-			overflow:hidden;
-			height:260px;
-		}
+	.hero-image img {
+		width:100%;
+		margin-bottom:20px;
 	}
 
-	@media screen and (min-width: 65em) {
-		.panels-container {
-			margin:40px 0;
+		.hero-title {
+			float:left;
+			max-width: 16em;
+			margin-left:20px;
 		}
+
+	.positioner {
+		position:absolute;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
 	}
+
+	.table {
+		display: table;
+		width:100%;
+		height:100%;
+	}
+
+		.cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+.panels-container,.instagram-feed {
+	margin:0 20px;
+}
 
 	.news-entry {
 		margin-top:8px !important;
 	}
+		.news-entry a:hover {
+			text-decoration: underline
+		}
 
-	.panels-container .panel {
-		margin:0;
-		margin-top:-1px;
-	}
+		.news-entry .date {
+			color:#777777;
+		}
 
 	.tickets {
-		padding:40px 30px;
+		padding:2.5em 1.875em;
 		background:#005191;
 	}
 
@@ -92,6 +118,11 @@ a {
 	.news-feed, .twitter-feed, .blurb {
 		position:relative;
 	}
+
+		.news-feed > *:first-child, .twitter-feed > *:first-child {
+			margin-bottom:30px;
+		}
+
 		.curtain {
 			position:absolute;
 			bottom:0;
@@ -101,32 +132,143 @@ a {
 			height:40px;
 		}
 
-.hero-image {
-	margin-bottom:-10%;
+.instagram-feed .row {
+	padding:0 1px 1px 0;
+	margin-bottom:20px;
 }
-	.hero-image img {
-		width:100%;
+
+	.instagram-feed .instagram-image {
+		float:left;
+		width:50%;
+		padding-left:1px;
+		margin-top:1px;
 	}
+
+.sponsors {
+	margin:0 0 40px;
+}
+
+	.sponsor-image {
+		display:block;
+	}
+
+	.sponsor .hover-reveal {
+		display:none;
+	}
+		.sponsor:hover .hover-reveal {
+			display:block;
+		}
+
+		.sponsor:hover .hover-hide {
+			display: none;
+		}
+
+
+	@media screen and (max-width: 65em) {
+		.hero-title {
+			font-size:1.618em;
+		}
+	}
+
+	@media screen and (max-width: 40.063em) {
+		.hero-title {
+			font-size:1.125em;
+		}
+	}
+
+	@media screen and (min-width: 40.063em) {
+		.hero-image {
+			margin-bottom:-10%;
+			position:relative;
+		}
+
+		.panels-container,.instagram-feed,.hero-title {
+			margin:-10% 40px 0;
+		}
+			.panels-container .panel {
+				margin:0;
+				margin-top:-1px;
+			}
+
+			.panels-container .panel {
+				border-left:0;
+			}
+				.panels-container .panel:first-child {
+					border-left:1px solid #005191;
+				}
+
+				.panels-container .next-game {
+					border-left:0;
+					padding:2.8125em 1.875em;
+				}
+
+		.news-feed, .twitter-feed, .blurb {
+			overflow:hidden;
+			height:19.375em;
+		}
+		
+		.instagram-feed .instagram-image {
+			width:33.33333%;
+			margin-top:1px;
+		}
+	}
+
+	@media screen and (min-width: 40.063em) and (max-width: 65em) {
+		.panels-container .tickets,
+		.panels-container .next-game {
+			border-left:1px solid #005191;
+		}
+	}
+
+	@media screen and (min-width: 65em) {
+		.instagram-feed {
+			margin:40px auto;
+		}
+
+		.hero-title {
+			margin:-10% 0 0;
+		}
+
+		.hero-title.panel:hover {
+			-webkit-box-shadow:0 0 5px #005191;
+			-moz-box-shadow:0 0 5px #005191;
+			box-shadow:0 0 5px #005191;
+		}
+
+		.panels-container {
+			margin:40px 0;
+		}
+		
+		.instagram-feed .row {
+			padding:1px 1px 1px 0;
+		}
+
+			.instagram-feed .instagram-image {
+				width:16.66667%;
+				margin-top:0;
+			}
+	}
+
 
 /**** HEADER ****/
 .header {
 	background:white;
-	padding:20px;
+	padding:20px 40px;
 	border-bottom:1px solid #ddd; /*temporary, used for setup*/
 	margin-bottom:-1px;
+	line-height: 70px;
 }
-	.header a {
-		color:;
-	}
 
 	.header .logo {
 		display:block;
 		width:65px;
+		margin-right:	20px;
 		margin-bottom:-19px;
 	}
 
 	.header .nav {
 		margin-top:12px;
+		font-weight: bold;
 	}
 
 /**** FOOTER ****/
@@ -139,3 +281,11 @@ footer {
 	footer .logo {
 		width:60px;
 	}
+
+	footer a {
+		color:#f5f5f5;
+	}
+		footer a:hover {
+			color:white;
+			text-decoration:underline;
+		}

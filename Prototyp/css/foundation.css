@@ -1158,7 +1158,7 @@ button, .button {
     text-align: right;
     padding-right: 0.75rem; }
   button.radius, .button.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
   button.round, .button.round {
     border-radius: 1000px; }
   button.disabled, button[disabled], .button.disabled, .button[disabled] {
@@ -1669,7 +1669,7 @@ meta.foundation-mq-topbar {
   border-width: 1px;
   background-color: #fbfbfb;
   border-color: #e1e1e1;
-  border-radius: 0px; }
+  border-radius: 2px; }
   .breadcrumbs > * {
     margin: 0;
     float: left;
@@ -1734,7 +1734,7 @@ meta.foundation-mq-topbar {
     .alert-box .close:hover, .alert-box .close:focus {
       opacity: 0.5; }
   .alert-box.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
   .alert-box.round {
     border-radius: 1000px; }
   .alert-box.success {
@@ -1934,7 +1934,7 @@ meta.foundation-mq-topbar {
     .panel.callout a:not(.button) {
       color: white; }
   .panel.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
 
 .dropdown.button, button.dropdown {
   position: relative;
@@ -1992,7 +1992,7 @@ meta.foundation-mq-topbar {
   .th:hover, .th:focus {
     box-shadow: 0 0 6px 1px rgba(0, 81, 145, 0.5); }
   .th.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
 
 /* Pricing Tables */
 .pricing-table {
@@ -2432,7 +2432,7 @@ ul.pagination {
       display: block;
       padding: 0.0625rem 0.625rem 0.0625rem;
       color: #999999;
-      border-radius: 0px; }
+      border-radius: 2px; }
     ul.pagination li:hover a,
     ul.pagination li a:focus {
       background: #e6e6e6; }
@@ -3097,7 +3097,7 @@ dialog[open] {
   dialog, .reveal-modal {
     padding: 1.875rem; }
     dialog.radius, .reveal-modal.radius {
-      border-radius: 0px; }
+      border-radius: 2px; }
     dialog.round, .reveal-modal.round {
       border-radius: 1000px; }
     dialog.collapse, .reveal-modal.collapse {
@@ -3175,7 +3175,7 @@ dialog[open] {
       left: auto;
       right: 5px; }
   .tooltip.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
   .tooltip.round {
     border-radius: 1000px; }
     .tooltip.round > .nub {
@@ -3407,7 +3407,7 @@ dialog[open] {
     height: 100%;
     display: block; }
   .progress.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
     .progress.radius .meter {
       border-radius: -1px; }
   .progress.round {
@@ -3627,7 +3627,7 @@ dialog[open] {
   background-color: #005191;
   color: white; }
   .label.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
   .label.round {
     border-radius: 1000px; }
   .label.alert {
@@ -4355,7 +4355,7 @@ textarea {
   input[type="time"].radius,
   input[type="url"].radius,
   textarea.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
 
 input[type="submit"] {
   -webkit-appearance: none; }
@@ -4377,7 +4377,7 @@ select {
   border-radius: 0;
   height: 2.3125rem; }
   select.radius {
-    border-radius: 0px; }
+    border-radius: 2px; }
   select:hover {
     background-color: #f3f3f3;
     border-color: #999999; }
@@ -4813,7 +4813,7 @@ kbd {
   font-family: "Consolas", "Menlo", "Courier", monospace;
   font-size: inherit;
   padding: 0.125rem 0.25rem 0;
-  border-radius: 0px; }
+  border-radius: 2px; }
 
 /* small displays */
 @media only screen {
