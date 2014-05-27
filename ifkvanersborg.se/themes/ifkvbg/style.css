@@ -31,6 +31,10 @@ a {
 		color:#004174;
 	}
 
+.skip-link {
+	display: none;
+}
+
 .caps {
 	text-transform: uppercase;
 	letter-spacing: 0.125em;

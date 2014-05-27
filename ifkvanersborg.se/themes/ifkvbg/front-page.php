@@ -11,13 +11,13 @@
 	      </div>
 	    </section>
 	  	
-	  	<div class="row">
-			<div class="medium-8 column">
-				<?php get_template_part( 'content'); ?>
-			</div>
-			<div class="medium-4 column">
-				<?php get_sidebar(); ?>
-			</div>
-	  	</div>
+	  	<div class="panels-container">
+      		<div class="row">
+      			<div class="panel news-feed medium-6 large-4 column">
+          			<h4 class="caps">Nyheter</h4>
+          			
+          		</div>
+      		</div>
+      	</div>
 
 <?php get_footer(); ?>

@@ -26,7 +26,9 @@
       <div class="row">
 			<a class="skip-link" href="#content" title="Gå till innehåll">Gå till innehåll</a>
 			
-			<a href="/" class="logo left"><img src="images/ifk_logo.png" alt="Logo"></a>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo left">
+				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_logo.png" alt="Logo">
+			</a>
 
 			<a class="btn menu-btn"></a>
 			
