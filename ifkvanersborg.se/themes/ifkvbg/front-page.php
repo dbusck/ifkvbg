@@ -16,7 +16,17 @@
 
 				<div class="panel news-feed medium-6 large-4 column">
 					<h4 class="caps">Nyheter</h4>
-						<!-- LOOP HERE -->
+						<ul class="no-bullet">
+							<?php
+								$args = array( 'numberposts' => '8' );
+								$recent_posts = wp_get_recent_posts( $args );
+								foreach( $recent_posts as $recent ){
+									echo '<li class="row news-entry"><span class="date caps medium-3 column">'.esc_attr(mysql2date('j M', $recent["post_date"])).'</span>
+										<a href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" class="post-title medium-9 column">' .   $recent["post_title"].'</a>
+									</li> ';
+								}
+							?>
+						</ul>
 					<div class="curtain"></div>
 				</div>
 

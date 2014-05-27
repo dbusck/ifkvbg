@@ -224,6 +224,10 @@ a {
 			width:33.33333%;
 			margin-top:1px;
 		}
+
+		.panel + .panel {
+			border-left:0;
+		}
 	}
 
 	@media screen and (min-width: 40.063em) and (max-width: 65em) {
