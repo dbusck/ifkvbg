@@ -49,15 +49,15 @@ a {
 		list-style: none;
 	}
 
-		.nav .has-dropdown:hover {
+		.nav .menu-item-has-children:hover {
 			background:#005191;
 		}
 
-			.nav .has-dropdown:hover a {
+			.nav .menu-item-has-children:hover a {
 				color:white;
 			}
 
-				.nav .has-dropdown:hover a:after {
+				.nav .menu-item-has-children:hover a:after {
 					border-top-color:white;
 				}
 

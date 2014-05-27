@@ -36,7 +36,7 @@
  				'theme_location'  => 'header-menu',
  				'menu'            => 'Header Menu',
  				'container'       => false,
-				'menu_class'      => 'top-bar-section right nav',
+				'menu_class'      => '',
  				'echo'            => true,
  				'fallback_cb'     => 'wp_page_menu',
 				'items_wrap'      => '%3$s',
