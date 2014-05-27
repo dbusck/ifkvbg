@@ -112,9 +112,10 @@ a {
 	.tickets {
 		padding:2.5em 1.875em;
 		background:#005191;
+		margin-bottom:0;
 	}
 
-		.panels-container .tickets h3 {
+		.tickets h3 {
 			color:white;
 		}
 
@@ -133,6 +134,11 @@ a {
 
 		.news-feed > *:first-child, .twitter-feed > *:first-child {
 			margin-bottom:30px;
+		}
+
+		.latest-tweets ul {
+			list-style:none;
+			margin:0;
 		}
 
 		.curtain {

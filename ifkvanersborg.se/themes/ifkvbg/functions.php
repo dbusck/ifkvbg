@@ -13,6 +13,19 @@ if( !is_admin()){
 	wp_enqueue_script('foundation_dropdown');
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Google Analytics in footer
 /*add_action('wp_head', 'add_google_analytics_tracking');
 function add_google_analytics_tracking() { ?>
@@ -30,6 +43,13 @@ function add_google_analytics_tracking() { ?>
 
 
 
+
+
+
+
+
+
+
 /*// Update options with custom options from custom settings page
 add_action( 'after_setup_theme', 'update_site_custom_options' );
 function update_site_custom_options() {
@@ -38,17 +58,37 @@ function update_site_custom_options() {
 }*/
 
 
+
+
+
+
+
+
+
+
+
 // Custom excerpt length
 add_filter('excerpt_length', 'custom_excerpt_length');
 function custom_excerpt_length($length) {
 	return 30;
 }
 
+
+
+
+
+
 // Replace default excerp [...] with read-more link
 add_filter('excerpt_more', 'new_excerpt_more');
 function new_excerpt_more( $more ) {
 	return '... <a class="read-more" href="'. get_permalink( get_the_ID() ) . '">Läs mer</a>';
 }
+
+
+
+
+
+
 
 // Remove inline-style in tagcloud
 add_filter('wp_generate_tag_cloud', 'xf_tag_cloud',10,3);
@@ -57,13 +97,25 @@ function xf_tag_cloud($tag_string){
 }
 
 
+
+
+
+
+
+
 // Remove inline styling for gallery
 add_filter( 'use_default_gallery_style', '__return_false' );
+
+
+
+
+
 
 
 //Featured Image Support
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size( 1000, 700 ); // Unlimited height, soft crop
+
 
 //Menu Support
 add_theme_support( 'menus' );
@@ -76,6 +128,14 @@ function register_my_menus() {
     array( 'header-menu' => __( 'Header Menu' ) )
   );
 }
+
+
+
+
+
+
+
+
 
 
 // List topmost ancestor and its immediate children
@@ -92,14 +152,24 @@ function get_post_top_ancestor_id(){
 }}
 
 
+
+
+
+
+
+
+
+
+
+
 //Widget areas
-/*if ( function_exists('register_sidebar') )
-register_sidebar(array('name'=>'Nyhetssidan',
-'before_widget' => '<div class="box">',
+if ( function_exists('register_sidebar') )
+register_sidebar(array(
+'before_widget' => '<div class="no-bullet">',
 'after_widget' => '</div>',
-'before_title' => '<h3>',
-'after_title' => '</h3>',
-));*/
+'before_title' => '',
+'after_title' => '',
+));
 
 
 /*// Adds custom classes to body if sidebar is not present, or if specified templates are used
@@ -110,6 +180,17 @@ function time_body_class( $classes ) {
 
 	return $classes;
 }*/
+
+
+
+
+
+
+
+
+
+
+
 
 
 //Add to TinyMCE first row
@@ -127,6 +208,18 @@ function custom_mce_buttons_2( $buttons ) {
     array_unshift( $buttons, 'styleselect' );            
     return $buttons;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*add_filter( 'tiny_mce_before_init', 'custom_mce_before_init' );
 function custom_mce_before_init( $settings ) {
@@ -161,6 +254,18 @@ function custom_mce_before_init( $settings ) {
 
 /*//Custom stylesheet for editing (looks in theme dir)
 add_editor_style('custom-editor-style.css');*/
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //HTML compression

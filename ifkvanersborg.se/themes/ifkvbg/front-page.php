@@ -38,7 +38,7 @@
 
 				<div class="panel twitter-feed medium-6 large-4 column">
 					<h4 class="caps">Twitter (<a href="https://twitter.com/IFKVBG_">@IFKVBG_</a>)</h4>
-						<!-- LOOP HERE -->
+						<?php dynamic_sidebar(); ?>
 					<div class="curtain"></div>
 				</div>
 
