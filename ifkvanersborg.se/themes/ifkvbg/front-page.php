@@ -5,7 +5,7 @@
 	      <div class="positioner">
 	        <div class="table row">
 	          <div class="cell">
-	          <h1 class="hero-title panel"><a href="#"><h1 class="center"><?php the_title(); ?></h1></a></h1>
+	          <h1 class="hero-title panel"><a href="<?php the_permalink(); ?>"><h1 class="center"><?php the_title(); ?></h1></a></h1>
 	          </div>
 	        </div>
 	      </div>

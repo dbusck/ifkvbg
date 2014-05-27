@@ -4,7 +4,7 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="initial-scale=1.0" />
 	<title><?php wp_title(''); ?></title>
-	<link href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon" />
+	<link href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/images/ios_icons/apple-touch-icon-114x114-precomposed.png">
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/foundation.css" />
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_stylesheet_uri(); ?>" />
@@ -39,7 +39,7 @@
  				'echo'            => true,
  				'fallback_cb'     => 'wp_page_menu',
 				'items_wrap'      => '%3$s',
-				'depth'           => '2',
+				'depth'           => '3',
 				)); ?>
 			</ul>
 			
