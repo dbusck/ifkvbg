@@ -12,10 +12,10 @@
 	    </section>
 	  	
 	  	<div class="row">
-			<div class="medium-8 column">
+			<div class="panel medium-8 column">
 				<?php get_template_part( 'content'); ?>
 			</div>
-			<div class="medium-4 column">
+			<div class="panel medium-4 column">
 				<?php get_sidebar(); ?>
 			</div>
 	  	</div>
