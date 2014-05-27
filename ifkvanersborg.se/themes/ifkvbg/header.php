@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<!doctype html>
+<html class="no-js" lang="sv" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="initial-scale=1.0" />
@@ -7,6 +7,9 @@
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/images/ios_icons/apple-touch-icon-114x114-precomposed.png">
 	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_stylesheet_uri(); ?>" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_stylesheet_uri(); ?>" />
+	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/foundation.css" />
+   <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/modernizr.js"></script>
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/css/ie8/ie8.css">
 	<![endif]-->
@@ -19,10 +22,12 @@
 <body <?php body_class(); ?>>
 
 	<!--HEADER-->
-	<header>
-		<div class="center">
+	<header class="header clearfix">
+      <div class="row">
 			<a class="skip-link" href="#content" title="Gå till innehåll">Gå till innehåll</a>
 			
+			<a href="/" class="logo left"><img src="images/ifk_logo.png" alt="Logo"></a>
+
 			<a class="btn menu-btn"></a>
 			
 			<ul class="nav main-nav">
@@ -30,11 +35,11 @@
  				'theme_location'  => 'header-menu',
  				'menu'            => 'Header Menu',
  				'container'       => false,
-				'menu_class'      => 'nav main-nav',
+				'menu_class'      => 'top-bar-section right nav',
  				'echo'            => true,
  				'fallback_cb'     => 'wp_page_menu',
 				'items_wrap'      => '%3$s',
-				'depth'           => '1',
+				'depth'           => '2',
 				)); ?>
 			</ul>
 			
