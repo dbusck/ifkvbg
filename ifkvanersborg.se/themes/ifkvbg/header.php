@@ -39,7 +39,7 @@
  				'echo'            => true,
  				'fallback_cb'     => 'wp_page_menu',
 				'items_wrap'      => '%3$s',
-				'depth'           => '2',
+				'depth'           => '3',
 				)); ?>
 			</ul>
 			
