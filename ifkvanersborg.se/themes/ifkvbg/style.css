@@ -69,10 +69,13 @@ a {
 		margin-bottom:20px;
 	}
 
-		.hero-title {
+		.hero-title.panel {
 			float:left;
 			max-width: 16em;
-			margin-left:20px;
+		}
+
+		.standalone-title {
+			margin:40px 0;
 		}
 
 	.positioner {
@@ -93,10 +96,6 @@ a {
 			display: table-cell;
 			vertical-align: middle;
 		}
-
-.panels-container,.instagram-feed {
-	margin:0 20px;
-}
 
 	.news-entry {
 		margin-top:8px !important;
@@ -181,12 +180,25 @@ a {
 		.hero-title {
 			font-size:1.618em;
 		}
+
+		.row,.instagram-feed {
+			padding:0 40px;
+		}
+			.row .row {
+				padding:0;
+			}
 	}
 
 	@media screen and (max-width: 40.063em) {
 		.hero-title {
 			font-size:1.125em;
 		}
+		.row,.instagram-feed {
+			padding:0 20px;
+		}
+			.row .row {
+				padding:0;
+			}
 	}
 
 	@media screen and (min-width: 40.063em) {
@@ -195,8 +207,8 @@ a {
 			position:relative;
 		}
 
-		.panels-container,.instagram-feed,.hero-title {
-			margin:-10% 40px 0;
+		.hero-title.panel {
+			margin:-10% 0 0;
 		}
 			.panels-container .panel {
 				margin:0;
@@ -220,10 +232,13 @@ a {
 			height:19.375em;
 		}
 		
-		.instagram-feed .instagram-image {
-			width:33.33333%;
-			margin-top:1px;
+		.instagram-feed {
+			margin:40px auto;
 		}
+			.instagram-feed .instagram-image {
+				width:33.33333%;
+				margin-top:1px;
+			}
 	}
 
 	@media screen and (min-width: 40.063em) and (max-width: 65em) {
@@ -234,18 +249,19 @@ a {
 	}
 
 	@media screen and (min-width: 65em) {
-		.instagram-feed {
-			margin:40px auto;
-		}
 
-		.hero-title {
+		.hero-title.panel {
 			margin:-10% 0 0;
 		}
 
-		.hero-title.panel:hover {
-			-webkit-box-shadow:0 0 5px #005191;
-			-moz-box-shadow:0 0 5px #005191;
-			box-shadow:0 0 5px #005191;
+			.hero-title.panel:hover {
+				-webkit-box-shadow:0 0 5px #005191;
+				-moz-box-shadow:0 0 5px #005191;
+				box-shadow:0 0 5px #005191;
+			}
+
+		.standalone-title {
+			margin:40px 0 0;
 		}
 
 		.panels-container {
@@ -286,7 +302,7 @@ a {
 
 /**** FOOTER ****/
 footer {
-	padding:40px 20px;
+	padding:40px 0;
 	background:#005191;
 	color:white;
 }
