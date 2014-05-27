@@ -260,12 +260,8 @@ a {
 				box-shadow:0 0 5px #005191;
 			}
 
-		.standalone-title {
-			margin:40px 0 0;
-		}
-
 		.panels-container {
-			margin:40px 0;
+			margin:0 0 40px;
 		}
 		
 		.instagram-feed .row {
