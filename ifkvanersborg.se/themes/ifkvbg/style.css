@@ -35,10 +35,15 @@ a {
 	display: none;
 }
 
-.caps {
+.caps,
+.tweet-details time{
 	text-transform: uppercase;
 	letter-spacing: 0.125em;
 	font-size:90%;
+}
+
+.tweet-text {
+	margin-bottom:5px;
 }
 
 .nav {
@@ -100,11 +105,12 @@ a {
 	.news-entry {
 		margin-top:8px !important;
 	}
-		.news-entry a:hover {
+		.panel a:hover {
 			text-decoration: underline
 		}
 
-		.news-entry .date {
+		.date,
+		.tweet-details time {
 			color:#777777;
 			font-size:13px;
 		}
