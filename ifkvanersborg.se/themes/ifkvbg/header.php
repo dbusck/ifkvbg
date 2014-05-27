@@ -6,9 +6,8 @@
 	<title><?php wp_title(''); ?></title>
 	<link href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico?v=2" rel="shortcut icon" type="image/x-icon" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo get_stylesheet_directory_uri(); ?>/images/ios_icons/apple-touch-icon-114x114-precomposed.png">
-	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_stylesheet_uri(); ?>" />
-	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_stylesheet_uri(); ?>" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/css/foundation.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="<?php echo get_stylesheet_uri(); ?>" />
    <script src="<?php echo get_stylesheet_directory_uri(); ?>/js/vendor/modernizr.js"></script>
 	<!--[if lte IE 8]>
 		<link rel="stylesheet" type="text/css" media="all" href="<?php echo get_stylesheet_directory_uri(); ?>/css/ie8/ie8.css">
@@ -32,7 +31,7 @@
 
 			<a class="btn menu-btn"></a>
 			
-			<ul class="nav main-nav">
+			<ul class="top-bar-section right nav">
 				<?php wp_nav_menu(array(
  				'theme_location'  => 'header-menu',
  				'menu'            => 'Header Menu',

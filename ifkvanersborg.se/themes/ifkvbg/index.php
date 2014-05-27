@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 		<section class="hero-image">
-	      <img src="images/startsida.jpg" alt="hero">
+	      <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/startsida.jpg" alt="hero">
 	      <div class="positioner">
 	        <div class="table row">
 	          <div class="cell">
