@@ -29,7 +29,7 @@
 				</a>
 
 				<div class="panel next-game large-4 column end text-center">
-					<h4 class="date caps">Nästa match spelas</h4>
+					<h4 class="caps">Nästa match spelas</h4>
 					<h3 class="game-date">4 jun</h3>
 					<h5 class="caps">IFK Vänersborg – Villa</h5>
 				</div>
