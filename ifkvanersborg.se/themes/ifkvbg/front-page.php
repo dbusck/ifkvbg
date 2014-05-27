@@ -6,7 +6,15 @@
 				<div class="positioner">
 					<div class="table row">
 						<div class="cell">
-							<h1 class="hero-title panel"><a href="<?php the_permalink(); ?>"><h1 class="center"><?php the_title(); ?></h1></a></h1>
+							<h1 class="hero-title panel">
+								<?php if ( (!is_single()) && !(is_page()) ) : ?>
+									<a href="<?php the_permalink(); ?>">
+								<?php endif; ?>
+									<?php the_title(); ?>
+								<?php if ( (!is_single()) ) : ?>
+									</a>
+								<?php endif; ?>
+							</h1>
 						</div>
 					</div>
 				</div>

@@ -66,6 +66,16 @@ a {
 					border-top-color:white;
 				}
 
+				.top-bar-section .menu-item-has-children:hover > .sub-menu, .top-bar-section .menu-item-has-children:hover > .sub-menu {
+					display: block;
+					position: static !important;
+					height: auto;
+					width: auto;
+					overflow: visible;
+					clip: auto;
+					position: absolute !important; 
+				}
+
 .hero-image {
 	position:relative;
 }

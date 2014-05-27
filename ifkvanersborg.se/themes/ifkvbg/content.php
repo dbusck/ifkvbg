@@ -5,8 +5,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <article class="post">
 <?php } ?>				
 
-	<?php if ( !(is_search()) && has_post_thumbnail() ) { ?>
-		<div class="main-content-header">
+	<?php if ( !(is_search()) && !(is_single()) && !(is_page()) && has_post_thumbnail() ) { ?>
+		<div class="post-header-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
 	<?php }; ?>
@@ -18,7 +18,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php if ( is_search() ) : // Only display Excerpts for Search
 			the_excerpt();
 		else : ?>
-			<h2><?php the_title(); ?></h2>
 			<?php the_content();
 		endif; ?>
 		
@@ -35,7 +34,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php }; ?>
 
 <?php endwhile; else: ?>
-	<div class="main-content">
+	<div class="panel">
 		<h3>Inget tyvärr inget att visa.</h3>
 	</div>
 <?php endif; // end loop. ?>
