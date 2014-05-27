@@ -20,28 +20,10 @@
 	  	<div class="panels-container">
 			<div class="row">
 
-				<div class="panel news-feed medium-6 large-4 column">
-					<h4 class="caps">Nyheter</h4>
-						<ul class="no-bullet">
-							<?php
-								$args = array( 'numberposts' => '8' );
-								$recent_posts = wp_get_recent_posts( $args );
-								foreach( $recent_posts as $recent ){
-									echo '<li class="row news-entry"><span class="date caps medium-3 column">'.esc_attr(mysql2date('j M', $recent["post_date"])).'</span>
-										<a href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" class="post-title medium-9 column">' .   $recent["post_title"].'</a>
-									</li> ';
-								}
-							?>
-						</ul>
-					<div class="curtain"></div>
-				</div>
+				
+				<?php dynamic_sidebar('front-page-feed'); ?>
 
-				<div class="panel twitter-feed medium-6 large-4 column">
-					<h4 class="caps">Twitter (<a href="https://twitter.com/IFKVBG_">@IFKVBG_</a>)</h4>
-						<?php dynamic_sidebar(); ?>
-					<div class="curtain"></div>
-				</div>
-
+				
 				<a class="panel tickets button large-4 column end text-center">
 					<h3>Köp biljett &rarr;</h3>
 				</a>

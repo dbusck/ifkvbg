@@ -112,7 +112,6 @@ a {
 	.tickets {
 		padding:2.5em 1.875em;
 		background:#005191;
-		margin-bottom:0;
 	}
 
 		.tickets h3 {
@@ -269,6 +268,10 @@ a {
 		.panels-container {
 			margin:0 0 40px;
 		}
+
+			.tickets {
+				margin-bottom:0;
+			}
 		
 		.instagram-feed .row {
 			padding:1px 1px 1px 0;

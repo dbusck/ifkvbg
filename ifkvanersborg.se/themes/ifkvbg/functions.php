@@ -163,13 +163,16 @@ function get_post_top_ancestor_id(){
 
 
 //Widget areas
-if ( function_exists('register_sidebar') )
-register_sidebar(array(
-'before_widget' => '<div class="no-bullet">',
-'after_widget' => '</div>',
-'before_title' => '',
-'after_title' => '',
-));
+
+register_sidebar( array(
+    'name'         => __( 'Front Page Feeds' ),
+    'id'           => 'front-page-feed',
+    'description'  => __( 'Widgets som läggs här syns på framsidan.' ),
+	'before_widget' => '<div class="panel news-feed medium-6 large-4 column">',
+	'after_widget' => '<div class="curtain"></div></div>',
+	'before_title' => '<h3 class="caps">',
+	'after_title' => '</h3>',
+) );
 
 
 /*// Adds custom classes to body if sidebar is not present, or if specified templates are used
@@ -180,6 +183,115 @@ function time_body_class( $classes ) {
 
 	return $classes;
 }*/
+
+
+
+
+
+
+
+
+
+
+add_action( 'widgets_init', 'Custom_Markup_WP_Widget_Recent_Posts' );
+function Custom_Markup_WP_Widget_Recent_Posts() {
+    register_widget( 'Custom_Markup_WP_Widget_Recent_Posts' );
+}
+
+/**
+ * Recent_Posts widget class
+ *
+ * @since 2.8.0
+ */
+class Custom_Markup_WP_Widget_Recent_Posts extends WP_Widget_Recent_Posts {
+
+	function widget($args, $instance) {
+		$cache = array();
+		if ( ! $this->is_preview() ) {
+			$cache = wp_cache_get( 'widget_recent_posts', 'widget' );
+		}
+
+		if ( ! is_array( $cache ) ) {
+			$cache = array();
+		}
+
+		if ( ! isset( $args['widget_id'] ) ) {
+			$args['widget_id'] = $this->id;
+		}
+
+		if ( isset( $cache[ $args['widget_id'] ] ) ) {
+			echo $cache[ $args['widget_id'] ];
+			return;
+		}
+
+		ob_start();
+		extract($args);
+
+		$title = ( ! empty( $instance['title'] ) ) ? $instance['title'] : __( 'Recent Posts' );
+
+		/** This filter is documented in wp-includes/default-widgets.php */
+		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+
+		$number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
+		if ( ! $number )
+			$number = 5;
+		$show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : false;
+
+		/**
+		 * Filter the arguments for the Recent Posts widget.
+		 *
+		 * @since 3.4.0
+		 *
+		 * @see WP_Query::get_posts()
+		 *
+		 * @param array $args An array of arguments used to retrieve the recent posts.
+		 */
+		$r = new WP_Query( apply_filters( 'widget_posts_args', array(
+			'posts_per_page'      => $number,
+			'no_found_rows'       => true,
+			'post_status'         => 'publish',
+			'ignore_sticky_posts' => true
+		) ) );
+
+		if ($r->have_posts()) :
+?>
+		<?php echo $before_widget; ?>
+		<?php if ( $title ) echo $before_title . $title . $after_title; ?>
+			<ul class="no-bullet">
+				<?php while ( $r->have_posts() ) : $r->the_post(); ?>
+					<li class="row news-entry">
+						<?php if ( $show_date ) : ?>
+							<span class="post-date date caps medium-3 column"><?php echo get_the_date(); ?></span>
+						<?php endif; ?>
+						<a href="<?php the_permalink(); ?>" class="post-title medium-9 column"><?php get_the_title() ? the_title() : the_ID(); ?></a>
+					</li>
+				<?php endwhile; ?>
+			</ul>
+		<?php echo $after_widget; ?>
+<?php
+		// Reset the global $the_post as this query will have stomped on it
+		wp_reset_postdata();
+
+		endif;
+
+		if ( ! $this->is_preview() ) {
+			$cache[ $args['widget_id'] ] = ob_get_flush();
+			wp_cache_set( 'widget_recent_posts', $cache, 'widget' );
+		} else {
+			ob_end_flush();
+		}
+	}
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
