@@ -74,7 +74,7 @@
 <?php wp_footer(); ?>
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/vendor/jquery.js"></script>
 <script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/min/foundation.min.js"></script>
-<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation.dropdown.js"></script>
+<script src="<?php bloginfo( 'stylesheet_directory' ); ?>/js/foundation/foundation.dropdown.js"></script>
 <script>
 	$(document).foundation();
 </script>

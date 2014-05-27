@@ -5,7 +5,7 @@ if( !is_admin()){
 	wp_deregister_script('jquery');
 	wp_register_script('jquery', ("http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"), false, '1.10.2', true);
 	wp_enqueue_script('jquery');
-	wp_register_script('modernizr', (get_template_directory_uri() . "/js/modernizr.js"), false, '1', false);
+	wp_register_script('modernizr', (get_template_directory_uri() . "/js/vendor/modernizr.js"), false, '1', false);
 	wp_enqueue_script('modernizr');
 }
 
