@@ -217,7 +217,7 @@ a {
 		margin:-1px 0 0 -1px;
 	}
 
-		.sidebar .panel.widget {
+		.sidebar .panel.widget:first-child {
 			margin-top:0;
 		}
 
