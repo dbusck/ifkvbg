@@ -52,10 +52,25 @@
 			<div class="row">
 
 				
-				<?php dynamic_sidebar('front-page-feed'); ?>
+				<div class="panel news-feed medium-6 large-4 column">
+					<h4 class="caps">Nyheter</h4>
+						<ul class="no-bullet">
+							<?php
+								$args = array( 'numberposts' => '7', 'category__not_in' => 4, );
+								$recent_posts = wp_get_recent_posts( $args );
+								foreach( $recent_posts as $recent ){
+									echo '<li class="row news-entry"><span class="date caps medium-3 column">'.esc_attr(mysql2date('j M', $recent["post_date"])).'</span>
+										<a href="' . get_permalink($recent["ID"]) . '" title="'.esc_attr($recent["post_title"]).'" class="post-title medium-9 column">' .   $recent["post_title"].'</a>
+									</li> ';
+								}
+							?>
+						</ul>
+					<div class="curtain"></div>
+				</div>
 
+				<?php dynamic_sidebar('front-page-twitter-feed'); ?>
 				
-				<a class="panel tickets button large-4 column end text-center">
+				<a href="<?php the_field('biljettkopslank'); ?>" class="panel tickets button large-4 column end text-center">
 					<h3>Köp biljett &rarr;</h3>
 				</a>
 

@@ -34,8 +34,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 <?php }; ?>
 
 <?php endwhile; else: ?>
-	<div class="panel">
-		<h3>Inget tyvärr inget att visa.</h3>
+	<div class="content">
+		<h3>Det finns tyvärr inget att visa.</h3>
 	</div>
 <?php endif; // end loop. ?>
 

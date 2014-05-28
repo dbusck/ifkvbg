@@ -423,24 +423,12 @@ footer {
 
 
 .wp-caption {
-	max-width: 96%; /* Image does not overflow the content area */
-	padding: 5px 3px 10px;
+	max-width: 100%; /* Image does not overflow the content area */
 }
 
-.wp-caption.alignnone {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignleft {
-    margin: 5px 20px 20px 0;
-}
-
-.wp-caption.alignright {
-    margin: 5px 0 20px 20px;
-}
-
-.wp-caption img {
-    border: 0 none;
+.wp-caption.alignleft,
+.wp-caption,.alignright {
+	max-width:60%;
 }
 
 .wp-caption p.wp-caption-text {
