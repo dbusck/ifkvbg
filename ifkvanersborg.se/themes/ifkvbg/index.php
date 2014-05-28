@@ -29,9 +29,6 @@
 			<div class="panel medium-8 column">
 				<?php get_template_part( 'content'); ?>
 			</div>
-			<a class="panel tickets button large-4 column end text-center">
-				<h3>Köp biljett &rarr;</h3>
-			</a>
 			<?php get_sidebar(); ?>
 	  	</div>
 

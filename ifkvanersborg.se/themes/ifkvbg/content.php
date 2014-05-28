@@ -14,21 +14,26 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 		<?php if ( (!is_single()) && !(is_page()) ) : ?>
 			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 		<? endif ?>
+
+		<?php if ( (!is_search()) && !(is_page()) ) : ?>
+			<div class="meta">
+				<p>
+					<span class="date caps">
+						<?php $time = the_date('l, j F Y', '', '', FALSE);
+						echo ucfirst($time);  ?>
+					</span>
+					<span class="author right">Av: <?php the_author_link(); ?></span>
+					<span class="tags"><?php the_tags(); ?></span>
+				</p>
+			</div>
+		<?php endif ?>
 		
 		<?php if ( is_search() ) : // Only display Excerpts for Search
 			the_excerpt();
 		else : ?>
 			<?php the_content();
 		endif; ?>
-		
-	<?php if ( (!is_search()) && !(is_page()) ) : ?>
-	<div class="meta"><p><span>
-		<?php $time = the_date('l, j F Y', '', '', FALSE);
-		echo ucfirst($time);  ?>
-		</span>
-		<span class="tags"><?php the_tags(); ?></span></p>
-	</div>
-	<?php endif ?>
+
 <?php if ( !is_page() ) { ?>
 </article>
 <?php }; ?>

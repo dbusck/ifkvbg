@@ -29,7 +29,9 @@
 				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_logo.png" alt="Logo">
 			</a>
 
-			<a class="btn menu-btn"></a>
+			<a class="btn menu-btn right"></a>
+
+			<a class="btn search-btn right fi-magnifying-glass"></a>
 			
 			<ul class="top-bar-section right nav">
 				<?php wp_nav_menu(array(

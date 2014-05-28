@@ -77,7 +77,7 @@
 				</div>
 				
 				<a href="<?php the_field('biljettkopslank'); ?>" class="panel tickets button large-4 column end text-center">
-					<h3>Köp biljett &rarr;</h3>
+					<h3><?php the_field('biljettkopstext'); ?></h3>
 				</a>
 
 				<div class="panel next-game large-4 column end text-center">
