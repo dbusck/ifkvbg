@@ -12,40 +12,16 @@
 						)
 					)
 				)
-			);
-		 
-			if( $posts )
-			{
-				foreach( $posts as $post )
-				{
-					setup_postdata( $post ); ?>
-			 
-					<?php if ( has_post_thumbnail() ): ?>
-						<section class="hero-image">
-							<?php the_post_thumbnail(); ?>
-							<div class="positioner">
-								<div class="table row">
-									<div class="cell">
-										<h1 class="hero-title panel">
-											<a href="<?php the_permalink(); ?>">
-												<?php the_title(); ?>
-											</a>
-										</h1>
-									</div>
-								</div>
-							</div>
-						</section>
-					<?php else : ?>
-						<div class="row">
-							<h1 class="hero-title standalone-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
-						</div>
-					<?php endif;
-			 
-				}
-			 
-				wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly
-			}		 
-		?>
+			); 
+			if( $posts ) :
+
+				foreach( $posts as $post ) :
+					setup_postdata( $post );
+					get_template_part( 'content-hero');
+				endforeach;
+				wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly	
+
+			endif; ?>
 
 
 	  	<div class="panels-container">

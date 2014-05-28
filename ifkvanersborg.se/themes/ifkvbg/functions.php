@@ -155,22 +155,7 @@ function get_post_top_ancestor_id(){
 
 
 
-
-
-
-
-
 //Widget areas
-
-register_sidebar( array(
-	'name'         => __( 'Box två på framsidan' ),
-	'id'           => 'front-page-twitter-feed',
-	'description'  => __( 'Widgets som läggs här syns i andra boxen från vänster på framsidan, från början avsedd för Twitter.' ),
-	'before_widget' => '<div class="panel news-feed medium-6 large-4 column">',
-	'after_widget' => '<div class="curtain"></div></div>',
-	'before_title' => '<h3 class="caps">',
-	'after_title' => '</h3>',
-) );
 
 register_sidebar( array(
 	'name'         => __( 'Sidopanel' ),
