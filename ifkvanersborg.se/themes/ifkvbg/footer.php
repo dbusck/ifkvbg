@@ -17,10 +17,7 @@
 
 		$result = json_decode($result);
 		foreach ($result->data as $post) {
-			if(empty($post->caption->text)) {
-				// Do Nothing
-			}
-			else {
+			if(!empty($post->caption->text)) {
 				echo '<a class="instagram-image" target="blank" href="'.$post->link.'">
 					<img src="'.$post->images->low_resolution->url.'" alt="'.$post->caption->text.'" width="100%" height="auto" />
 				</a>';
@@ -32,7 +29,7 @@
 </div>
 
 
-<?php dynamic_sidebar('footer'); ?>
+<?php get_sidebar('footer'); ?>
 
 <!--SCRIPTS-->
 <?php wp_footer(); ?>
