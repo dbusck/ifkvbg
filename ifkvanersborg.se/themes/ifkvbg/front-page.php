@@ -81,7 +81,7 @@
 					<div class="curtain"></div>
 				</div>
 
-				<a class="panel blurb medium-6 large-8 column end">
+				<a href="<?php the_field('image_blurb_link'); ?>" class="panel blurb medium-6 large-8 column end">
 					<img src="<?php the_field('image_blurb_big'); ?>" alt="blurb-image">
 					<div class="positioner">
 						<div class="table">
