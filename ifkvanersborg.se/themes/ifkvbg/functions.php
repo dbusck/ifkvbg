@@ -114,7 +114,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 //Featured Image Support
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size( 1000, 700 ); // Unlimited height, soft crop
+set_post_thumbnail_size( 1100, 500, true ); // Unlimited height, hard crop
 
 
 //Menu Support
@@ -165,9 +165,9 @@ function get_post_top_ancestor_id(){
 //Widget areas
 
 register_sidebar( array(
-    'name'         => __( 'Front Page Feeds' ),
-    'id'           => 'front-page-feed',
-    'description'  => __( 'Widgets som läggs här syns på framsidan.' ),
+	'name'         => __( 'Front Page Feeds' ),
+	'id'           => 'front-page-feed',
+	'description'  => __( 'Widgets som läggs här syns på framsidan.' ),
 	'before_widget' => '<div class="panel news-feed medium-6 large-4 column">',
 	'after_widget' => '<div class="curtain"></div></div>',
 	'before_title' => '<h3 class="caps">',
@@ -175,13 +175,23 @@ register_sidebar( array(
 ) );
 
 register_sidebar( array(
-    'name'         => __( 'Sidopanel' ),
-    'id'           => 'default',
-    'description'  => __( 'Standard sidopanel som syns på de flesta undersidor.' ),
+	'name'         => __( 'Sidopanel' ),
+	'id'           => 'default',
+	'description'  => __( 'Standard sidopanel som syns på de flesta undersidor.' ),
 	'before_widget' => '<div class="panel widget">',
 	'after_widget' => '</div>',
 	'before_title' => '<h3 class="caps">',
 	'after_title' => '</h3>',
+) );
+
+register_sidebar( array(
+	'name'         => __( 'Sidfot' ),
+	'id'           => 'footer',
+	'description'  => __( 'Widgets som syns i sidfoten. Från början tre stycken, tänkta att vara kontaktinformation.' ),
+	'before_widget' => '<div class="medium-3 column"><ul class="no-bullet">',
+	'after_widget' => '</ul></div>',
+	'before_title' => '',
+	'after_title' => '',
 ) );
 
 

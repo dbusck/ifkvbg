@@ -32,40 +32,7 @@
 </div>
 
 
-<!--FOOTER-->
-<footer>
-	<div class="row">
-		<div class="medium-3 column">
-			<ul class="no-bullet">
-				<li><strong><?php echo get_bloginfo('title'); ?></strong></li>
-				<li><a href="#">0521-17274</a></li>
-				<li><a href="#">info@ifkvanersborg.se</a></li>
-			</ul>
-		</div>
-
-		<div class="medium-3 column">
-          <ul class="no-bullet">
-            <li>Arena Vänersborg</li>
-            <li>Brättevägen 15</li>
-            <li>462 35 Vänersborg</li>
-          </ul>
-        </div>
-
-        <div class="medium-3 column">
-          <ul class="no-bullet">
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Twitter</a></li>
-            <li><a href="#">Instagram</a></li>
-          </ul>
-        </div>
-
-        <div class="medium-3 column">
-          <a href="#" class="left">Till toppen &uarr;</a>
-          <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_vbglogo_simpel.png" class="logo right" alt="logo">
-        </div>
-
-	</div>
-</footer>
+<?php dynamic_sidebar('footer'); ?>
 
 <!--SCRIPTS-->
 <?php wp_footer(); ?>

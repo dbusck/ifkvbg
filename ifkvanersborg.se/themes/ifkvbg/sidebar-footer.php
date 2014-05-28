@@ -1,19 +1,12 @@
-<?php
-/**
- * The Footer Sidebar
- *
- * @package WordPress
- * @subpackage Twenty_Fourteen
- * @since Twenty Fourteen 1.0
- */
+<!--FOOTER-->
+<footer>
+	<div class="row">
+		<?php dynamic_sidebar( 'footer' ); ?>
 
-if ( ! is_active_sidebar( 'sidebar-3' ) ) {
-	return;
-}
-?>
+        <div class="medium-3 column">
+          <a href="#" class="left">Till toppen &uarr;</a>
+          <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_vbglogo_simpel.png" class="logo right" alt="logo">
+        </div>
 
-<div id="supplementary">
-	<div id="footer-sidebar" class="footer-sidebar widget-area" role="complementary">
-		<?php dynamic_sidebar( 'sidebar-3' ); ?>
-	</div><!-- #footer-sidebar -->
-</div><!-- #supplementary -->
+	</div>
+</footer>
