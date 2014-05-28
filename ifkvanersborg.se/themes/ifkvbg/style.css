@@ -31,6 +31,8 @@ a {
 		color:#004174;
 	}
 
+input[type='text'],input[type='number'],textarea {font-size:16px;}
+
 .skip-link {
 	display: none;
 }
@@ -256,6 +258,10 @@ a {
 
 
 	@media screen and (max-width: 65em) {
+		.header .nav {
+			padding:0 20px;
+		}
+
 		.hero-title {
 			font-size:1.618em;
 		}
@@ -266,12 +272,12 @@ a {
 			.row .row {
 				padding:0;
 			}
+
 	} /* End media query */
 
 	@media screen and (max-width: 40.063em) {
-		.nav.right {
+		.header .nav.right {
 			float:none !important;
-			margin-top:120px;
 		}
 
 			.nav li {
@@ -374,6 +380,11 @@ a {
 
 	@media screen and (min-width: 65em) {
 
+		.header .nav {
+			margin-top:12px;
+			font-weight: bold;
+		}
+
 		.hero-title.panel {
 			margin:-10% 0 0;
 		}
@@ -425,11 +436,6 @@ a {
 		margin-bottom:-19px;
 	}
 
-	.header .nav {
-		margin-top:12px;
-		font-weight: bold;
-	}
-
 	.header .search-btn,
 	.header .menu-btn {
 		margin-left:15px;
@@ -445,9 +451,41 @@ a {
 			font-weight:normal;
 		}
 
-		.header .menu-btn {
+		.header .menu-btn { 
 			margin-left:30px;
 		}
+
+.search-form-wrapper,
+.header .nav {
+	background:white;
+	border-bottom:1px solid #ddd;
+	position:absolute;
+	padding-top:20px;
+	top:0;
+	height:1px;
+	opacity:0;
+	z-index:-1;
+	width:100%;
+	-webkit-transition: all 200ms linear;
+	-moz-transition: all 200ms linear;
+	-o-transition: all 200ms linear;
+	transition: all 200ms linear;
+}
+
+	.search-open .search-form-wrapper,
+	.menu-open .header .nav {
+		opacity:1;
+		z-index:98;
+		top:110px;
+		height:auto;
+	}
+
+
+.screen-reader-text {
+	display:none;
+}
+
+
 
 /**** FOOTER ****/
 footer {
@@ -473,31 +511,6 @@ footer {
 .error404 .content {
 	margin:80px auto 40px;
 	max-width:35em;
-}
-
-.search-form-wrapper {
-	background:white;
-	border-bottom:1px solid #ddd;
-	position:absolute;
-	padding-top:20px;
-	top:0;
-	opacity:0;
-	z-index:-1;
-	width:100%;
-	-webkit-transition: all 200ms linear;
-	-moz-transition: all 200ms linear;
-	-o-transition: all 200ms linear;
-	transition: all 200ms linear;
-}
-	.search-open .search-form-wrapper {
-		opacity:1;
-		z-index:98;
-		top:110px;
-	}
-
-
-.screen-reader-text {
-	display:none;
 }
 
 

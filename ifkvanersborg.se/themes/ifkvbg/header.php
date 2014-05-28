@@ -32,7 +32,7 @@
 			<a class="btn search-btn right"><i class="fi-magnifying-glass"></i></a>
 			<a class="btn menu-btn right caps hide-for-large-up">Meny <i class="fi-list"></i></a>
 			
-			<ul class="top-bar-section right nav show-for-large-up">
+			<ul class="top-bar-section right nav">
 				<?php wp_nav_menu(array(
  				'theme_location'  => 'header-menu',
  				'menu'            => 'Header Menu',

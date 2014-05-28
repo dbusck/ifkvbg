@@ -6,7 +6,7 @@
 
 				<h1 class="hero-title standalone-title">
 					<a href="<?php the_permalink(); ?>">
-						<?php printf( __( 'Sökresultat för: %s' ), get_search_query() ); ?>
+						<?php printf( __( 'Sökresultat för: "%s"' ), get_search_query() ); ?>
 					</a>
 				</h1>
 
