@@ -2,7 +2,7 @@ $(document).ready(function() {
 
 		$(".search-btn").click(function() {
 			$("body").removeClass("menu-open").toggleClass("search-open");
-			$(".search-form .search-field").focus();
+			$(".search-open .search-form .search-field").focus();
 			return false;
 		});
 
