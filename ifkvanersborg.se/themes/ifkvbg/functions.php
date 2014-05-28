@@ -11,6 +11,8 @@ if( !is_admin()){
 	wp_enqueue_script('foundation');
 	wp_register_script('foundation_dropdown', (get_template_directory_uri() . "/js/foundation/foundation.dropdown.js"), false, '1', true);
 	wp_enqueue_script('foundation_dropdown');
+	wp_register_script('application', (get_template_directory_uri() . "/js/min/application.min.js"), false, '1', true);
+	wp_enqueue_script('application');
 }
 
 

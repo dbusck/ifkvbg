@@ -29,8 +29,8 @@
 				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_logo.png" alt="Logo">
 			</a>
 
-			<a class="btn menu-btn right caps hide-for-large-up">Meny <i class="fi-list"></i></a>
 			<a class="btn search-btn right"><i class="fi-magnifying-glass"></i></a>
+			<a class="btn menu-btn right caps hide-for-large-up">Meny <i class="fi-list"></i></a>
 			
 			<ul class="top-bar-section right nav show-for-large-up">
 				<?php wp_nav_menu(array(
@@ -48,7 +48,7 @@
 		</div>
 	</header>
 
-	<div class="search-form">
+	<div class="search-form-wrapper">
 		<div class="row">
 			<?php get_search_form(); ?>
 		</div>
