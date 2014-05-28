@@ -32,9 +32,7 @@
 			<a class="panel tickets button large-4 column end text-center">
 				<h3>Köp biljett &rarr;</h3>
 			</a>
-			<div class="panel medium-4 column end">
-				<?php get_sidebar(); ?>
-			</div>
+			<?php get_sidebar(); ?>
 	  	</div>
 
 <?php get_footer(); ?>
