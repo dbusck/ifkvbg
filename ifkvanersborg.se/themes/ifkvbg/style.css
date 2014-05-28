@@ -170,10 +170,11 @@ a {
 			margin-bottom:30px;
 		}
 
-		.latest-tweets ul {
-			list-style:none;
-			margin:0;
-		}
+
+			.latest-tweets ul {
+				list-style:none;
+				margin:0;
+			}
 
 		.curtain {
 			position:absolute;
