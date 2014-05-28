@@ -25,7 +25,7 @@
 			</div>
 		<?php endif ?>
 	  	
-	  	<div class="row">
+	  	<div class="content row">
 			<div class="panel medium-8 column">
 				<?php get_template_part( 'content'); ?>
 			</div>

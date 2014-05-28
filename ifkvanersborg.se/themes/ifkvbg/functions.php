@@ -124,6 +124,10 @@ function register_my_menus() {
 }
 
 
+// This theme styles the visual editor to resemble the theme style.
+add_editor_style( 'css/editor-style.css' );
+
+
 
 
 
