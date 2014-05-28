@@ -63,6 +63,13 @@
 
 				<a class="panel blurb medium-6 large-8 column end">
 					<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/18.jpg" alt="blurb-image">
+					<div class="positioner">
+						<div class="table">
+							<div class="cell text-center">
+								<h3 class="panel">Stolthet, passion, gemenskap</h3>
+							</div>
+						</div>
+					</div>
 				</a>
 
    		</div>
