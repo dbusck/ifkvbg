@@ -201,8 +201,7 @@ a {
 }
 
 	.sidebar .panel.widget {
-		border-left:0;
-		margin:-1px 0 0;
+		margin:-1px 0 0 -1px;
 	}
 
 .tagcloud a {
@@ -271,7 +270,8 @@ a {
 			.panel {
 				border-left:0;
 			}
-				.panel:first-child {
+				.panel:first-child,
+				.sidebar .panel {
 					border-left:1px solid #005191;
 				}
 
