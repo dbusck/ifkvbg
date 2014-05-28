@@ -192,6 +192,16 @@ register_sidebar( array(
 	'after_title' => '</h4>',
 ) );
 
+register_sidebar( array(
+	'name'         => __( 'Nyheter' ),
+	'id'           => 'news',
+	'description'  => __( 'Sidopanel för nyhetssidor' ),
+	'before_widget' => '<div class="medium-3 column"><ul class="no-bullet">',
+	'after_widget' => '</ul></div>',
+	'before_title' => '<h4 class="caps">',
+	'after_title' => '</h4>',
+) );
+
 
 
 
