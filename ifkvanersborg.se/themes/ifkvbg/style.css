@@ -76,7 +76,7 @@ a {
 					position: absolute !important; 
 				}
 
-.hero-image {
+.hero-image .content {
 	position:relative;
 }
 	.hero-image img {
