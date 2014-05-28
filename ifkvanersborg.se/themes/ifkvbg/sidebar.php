@@ -1,6 +1,3 @@
-<aside class="secondary-content">
+<aside class="panel medium-4 column end">
 	<?php dynamic_sidebar(); ?>
 </aside>
-
-<div class="panel medium-4 column end">
-</div>
