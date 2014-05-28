@@ -68,7 +68,13 @@
 					<div class="curtain"></div>
 				</div>
 
-				<?php dynamic_sidebar('front-page-twitter-feed'); ?>
+				<div class="panel news-feed medium-6 large-4 column">
+					<h4 class="caps">Twitter (<a href="https://twitter.com/search?q=%23ifkvaenersborg&src=tyah">@IFKVBG_</a>)</h4>
+						<ul class="no-bullet">
+							<?php the_widget( 'Latest_Tweets_Widget', 'title=&screen_name=IFKVBG_', 'before_title=&after_title='); ?>
+						</ul>
+					<div class="curtain"></div>
+				</div>
 				
 				<a href="<?php the_field('biljettkopslank'); ?>" class="panel tickets button large-4 column end text-center">
 					<h3>Köp biljett &rarr;</h3>
