@@ -19,13 +19,6 @@ if( !is_admin()){
 
 
 
-
-
-
-
-
-
-
 // Google Analytics in footer
 /*add_action('wp_head', 'add_google_analytics_tracking');
 function add_google_analytics_tracking() { ?>
@@ -45,22 +38,12 @@ function add_google_analytics_tracking() { ?>
 
 
 
-
-
-
-
-
 /*// Update options with custom options from custom settings page
 add_action( 'after_setup_theme', 'update_site_custom_options' );
 function update_site_custom_options() {
 	$getoption = get_option('site-settings');
 	update_option( 'blogdescription', $getoption['site-description'] );
 }*/
-
-
-
-
-
 
 
 
@@ -108,7 +91,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 
 //Featured Image Support
 add_theme_support('post-thumbnails');
-set_post_thumbnail_size( 1100, 500, true ); // Unlimited height, hard crop
+set_post_thumbnail_size( 1100, 500 ); // Unlimited height, hard crop
 
 
 //Menu Support
@@ -128,6 +111,7 @@ function register_my_menus() {
 add_editor_style( 'css/editor-style.css' );
 
 
+add_theme_support( 'html5', array( 'search-form' ) );
 
 
 

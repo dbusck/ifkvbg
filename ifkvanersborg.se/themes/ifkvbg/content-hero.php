@@ -5,11 +5,11 @@
 			<div class="table row">
 				<div class="cell">
 					<h1 class="hero-title panel">
-						<?php if ( (!is_single()) ) : ?>
+						<?php if ( (!is_single()) && (!is_page())  ) : ?>
 							<a href="<?php the_permalink(); ?>">
 						<?php endif; ?>
 							<?php the_title(); ?>
-						<?php if ( (!is_single()) ) : ?>
+						<?php if ( (!is_single()) && (!is_page()) ) : ?>
 							</a>
 						<?php endif; ?>
 					</h1>

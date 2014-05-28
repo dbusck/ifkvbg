@@ -29,11 +29,10 @@
 				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_logo.png" alt="Logo">
 			</a>
 
-			<a class="btn menu-btn right"></a>
-
-			<a class="btn search-btn right fi-magnifying-glass"></a>
+			<a class="btn menu-btn right caps hide-for-large-up">Meny <i class="fi-list"></i></a>
+			<a class="btn search-btn right"><i class="fi-magnifying-glass"></i></a>
 			
-			<ul class="top-bar-section right nav">
+			<ul class="top-bar-section right nav show-for-large-up">
 				<?php wp_nav_menu(array(
  				'theme_location'  => 'header-menu',
  				'menu'            => 'Header Menu',
@@ -48,3 +47,9 @@
 			
 		</div>
 	</header>
+
+	<div class="search-form">
+		<div class="row">
+			<?php get_search_form(); ?>
+		</div>
+	</div>
