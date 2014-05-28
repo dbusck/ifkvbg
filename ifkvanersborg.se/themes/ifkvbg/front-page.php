@@ -1,16 +1,18 @@
 <?php get_header(); ?>
 
 		<?php
-			$posts = get_posts(array(
-				'meta_query' => array(
-					array(
-						'posts_per_page' => 1,
-						'key' => 'important_news',
-						'value' => '1',
-						'compare' => '=='
+			$posts = get_posts(
+				array(
+					'numberposts' => 1,
+					'meta_query' => array(
+						array(
+							'key' => 'important_news',
+							'value' => '1',
+							'compare' => '=='
+						)
 					)
 				)
-			));
+			);
 		 
 			if( $posts )
 			{
@@ -83,11 +85,11 @@
 				</div>
 
 				<a class="panel blurb medium-6 large-8 column end">
-					<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/18.jpg" alt="blurb-image">
+					<img src="<?php the_field('image_blurb_big'); ?>" alt="blurb-image">
 					<div class="positioner">
 						<div class="table">
 							<div class="cell text-center">
-								<h3 class="panel">Stolthet, passion, gemenskap</h3>
+								<h3 class="panel"><?php the_field('image_blurb_text'); ?></h3>
 							</div>
 						</div>
 					</div>

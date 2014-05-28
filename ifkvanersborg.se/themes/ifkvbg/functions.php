@@ -190,8 +190,8 @@ register_sidebar( array(
 	'description'  => __( 'Widgets som syns i sidfoten. Från början tre stycken, tänkta att vara kontaktinformation.' ),
 	'before_widget' => '<div class="medium-3 column"><ul class="no-bullet">',
 	'after_widget' => '</ul></div>',
-	'before_title' => '',
-	'after_title' => '',
+	'before_title' => '<h4 class="caps">',
+	'after_title' => '</h4>',
 ) );
 
 
