@@ -174,6 +174,18 @@ register_sidebar( array(
 	'after_title' => '</h3>',
 ) );
 
+register_sidebar( array(
+    'name'         => __( 'Sidopanel' ),
+    'id'           => 'default',
+    'description'  => __( 'Standard sidopanel som syns på de flesta undersidor.' ),
+	'before_widget' => '<div class="panel widget">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="caps">',
+	'after_title' => '</h3>',
+) );
+
+
+
 
 /*// Adds custom classes to body if sidebar is not present, or if specified templates are used
 add_filter( 'body_class', 'time_body_class' );
