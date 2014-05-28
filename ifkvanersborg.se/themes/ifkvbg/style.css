@@ -17,7 +17,6 @@ Dark color: #333333
 /**** GLOBAL STYLES ****/
 html {
 	font-size:16px;
-	-webkit-tap-highlight-color: rgba(0,81,145,0.8);;
 }
 
 body {
@@ -27,6 +26,7 @@ body {
 
 a {
 	color:#005191;
+	-webkit-tap-highlight-color: rgba(0,81,145,0.8);
 }
 	a:hover {
 		color:#004174;
