@@ -21,7 +21,9 @@ Template Name: Partners
 						        ?>
 
 						      <h4> 
+						      	<?php
 						      	 the_sub_field('partners_rubrik');
+						      	?>
 						      </h4>
 						      		<?php
 
