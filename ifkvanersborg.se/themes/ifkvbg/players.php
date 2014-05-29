@@ -9,7 +9,7 @@ Template Name: Players
 		<?php get_template_part( 'content-hero'); ?>
 	  	
 	  	<div class="content row">
-			<div class="medium-3 column">
+			<div class="panel medium-8 column">
 				<?php
  
 						// check if the repeater field has rows of data
@@ -19,12 +19,13 @@ Template Name: Players
 						    while ( have_rows('players') ) : the_row();
 						 
 						        ?>
-						     <img src="<?php the_sub_field('player-image'); ?>" alt="player" />
+						     <div class="player medium-3 column">
+						     	<img src="<?php the_sub_field('player-image'); ?>" alt="player" />
 						      
 						      	<?php
 						      	 the_sub_field('players-info');
 						      	?>
-						      
+						      </div>
 						      		<?php
 
 
