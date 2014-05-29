@@ -40,7 +40,7 @@ Template Name: Partners
 																		 
 																		if( !empty($image) ): ?>
 																		 
-																			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																			<img src="<?php  $image ?>" alt="logo" />
 																		 
 																		<?php endif; 
 														 
