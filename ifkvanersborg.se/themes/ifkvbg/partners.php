@@ -29,22 +29,11 @@ Template Name: Partners
 														if( have_rows('partners_logosection') ):
 														 
 														 	// loop through the rows of data
-														    while ( have_rows('partners_logosection') ) : the_row();
-														 
-														        // display a sub field value
-														        
-
-
+														    while ( have_rows('partners_logosection') ) : the_row(); ?>
 																		 
-																		$image = the_sub_field('partners_logo');
-																		 
-																		if( !empty($image) ): ?>
-																		 
-																			<img src="<?php  $image ?>" alt="logo" />
-																		 
-																		<?php endif; 
-														 
-														    endwhile;
+																<img src="<?php the_sub_field('partners_logo'); ?>" alt="logo" />
+													 
+														   <?php endwhile;
 														 
 														else :
 														 
