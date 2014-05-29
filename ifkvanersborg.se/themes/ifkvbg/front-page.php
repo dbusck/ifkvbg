@@ -106,6 +106,8 @@
 			   </div>
 			<?php endif; ?>
 
+			<?php get_template_part( 'instagram-feed'); ?>
+
 
 			<?php if( have_rows('front-page-blurbs') ):	?>
 				<div class="row">

@@ -8,4 +8,5 @@
 		</div>			
 	</div><!-- #primary -->
 
+<?php get_template_part( 'instagram-feed'); ?>
 <?php get_footer(); ?>
