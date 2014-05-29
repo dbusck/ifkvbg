@@ -94,9 +94,37 @@
 
    		</div>
 
-   		<div class="row">
-   			<?php dynamic_sidebar('front-page-blurbs'); ?>
-   		</div>
+   		<?php if( have_rows('partners_logosection') ):	?>
+				<div class="logo-section">		
+
+					<?php	while ( have_rows('partners_logosection') ) : the_row(); ?>							 
+						<div class="small-6 column"> 
+							<img src="<?php the_sub_field('partners_logo'); ?>" alt="logo" />
+			 			</div>
+				   <?php endwhile; ?>
+
+			   </div>
+			<?php endif; ?>
+
+
+			<?php if( have_rows('front-page-blurbs') ):	?>
+				<div class="row">
+	   			<?php	while ( have_rows('front-page-blurbs') ) : the_row(); ?>
+	   				<a href="<?php the_sub_field('front-page-blurb-link'); ?>" class="panel blurb medium-6 large-4 column end">
+							<img src="<?php the_sub_field('front-page-blurb-image'); ?>" alt="blurb-image">
+							<div class="positioner">
+								<?php if (the_sub_field('front-page-blurb-text')) : ?>
+									<div class="table">
+										<div class="cell text-center">
+											<h3 class="panel"><?php the_sub_field('front-page-blurb-text'); ?></h3>
+										</div>
+									</div>
+								<?php endif ?>
+							</div>
+						</a>
+					<?php endwhile; ?>
+   			</div>
+   		<?php endif; ?>
       </div>
 
 <?php get_footer(); ?>
