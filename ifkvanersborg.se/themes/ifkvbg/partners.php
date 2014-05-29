@@ -32,7 +32,17 @@ Template Name: Partners
 														    while ( have_rows('partners_logosection') ) : the_row();
 														 
 														        // display a sub field value
-														        the_sub_field('partners_logo');
+														        
+
+
+																		 
+																		$image = the_sub_field('partners_logo');
+																		 
+																		if( !empty($image) ): ?>
+																		 
+																			<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+																		 
+																		<?php endif; 
 														 
 														    endwhile;
 														 
