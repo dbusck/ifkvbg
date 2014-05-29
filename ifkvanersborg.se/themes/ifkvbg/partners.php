@@ -19,7 +19,9 @@ Template Name: Partners
 						    while ( have_rows('partners') ) : the_row();
 						 
 						        // display a sub field value
-						        the_sub_field('partners_rubrik');
+						      <h4> 
+						      	 the_sub_field('partners_rubrik');
+						      </h4>
 
 
 
