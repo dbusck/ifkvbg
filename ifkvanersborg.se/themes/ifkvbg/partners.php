@@ -32,7 +32,14 @@ Template Name: Partners
 
  
 														// check if the repeater field has rows of data
-														if( have_rows('partners_logosection') ):
+														if( have_rows('partners_logosection') ):	
+															?>
+
+															<div class="logo-section">
+															
+
+																<?php
+
 														 
 														 	// loop through the rows of data
 														    while ( have_rows('partners_logosection') ) : the_row(); ?>
@@ -40,8 +47,10 @@ Template Name: Partners
 																<div class="small-6 column"> 
 																	<img src="<?php the_sub_field('partners_logo'); ?>" alt="logo" />
 													 			</div>
-														   <?php endwhile;
-														 
+														   <?php endwhile; ?>
+
+														   </div>
+														 		<?php
 														else :
 														 
 														    // no rows found
