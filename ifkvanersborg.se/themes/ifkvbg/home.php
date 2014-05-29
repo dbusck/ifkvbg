@@ -1,4 +1,6 @@
 <?php get_header(); ?>
+		
+		<!-- ARCHIVE TEMPLATE -->
 
 		<?php get_template_part( 'content-hero'); ?>
 	  	

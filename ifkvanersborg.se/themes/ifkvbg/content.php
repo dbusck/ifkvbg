@@ -2,7 +2,7 @@
 if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <?php if ( !is_page() ) { ?>
-<article class="post">
+<article class="panel post">
 <?php } ?>				
 
 	<?php if ( !(is_search()) && !(is_single()) && !(is_page()) && has_post_thumbnail() ) { ?>
@@ -22,7 +22,7 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 						<?php $time = the_date('l, j F Y', '', '', FALSE);
 						echo ucfirst($time);  ?>
 					</span>
-					<span class="author right">Av: <?php the_author_link(); ?></span>
+					<span class="author right caps">Av: <?php the_author_link(); ?></span>
 					<span class="tags"><?php the_tags(); ?></span>
 				</p>
 			</div>
@@ -44,6 +44,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	</div>
 <?php endif; // end loop. ?>
 
-<div class="nav page-nav">
+<div class="nav page-nav text-center">
 	<?php posts_nav_link(' &#8211; ', '&#171; Föregående sida', 'Nästa sida &#187;'); ?>
 </div>

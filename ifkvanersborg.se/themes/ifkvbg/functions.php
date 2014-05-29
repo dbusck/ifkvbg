@@ -167,10 +167,10 @@ register_sidebar( array(
 	'name'         => __( 'Nyheter' ),
 	'id'           => 'news',
 	'description'  => __( 'Sidopanel för nyhetssidor' ),
-	'before_widget' => '<div class="medium-3 column"><ul class="no-bullet">',
-	'after_widget' => '</ul></div>',
-	'before_title' => '<h4 class="caps">',
-	'after_title' => '</h4>',
+	'before_widget' => '<div class="panel widget">',
+	'after_widget' => '</div>',
+	'before_title' => '<h3 class="caps">',
+	'after_title' => '</h3>',
 ) );
 
 

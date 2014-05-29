@@ -5,9 +5,7 @@
 			<?php if ( have_posts() ) : ?>
 
 				<h1 class="hero-title standalone-title">
-					<a href="<?php the_permalink(); ?>">
-						<?php printf( __( 'Sökresultat för: "%s"' ), get_search_query() ); ?>
-					</a>
+					<?php printf( __( 'Sökresultat för: "%s"' ), get_search_query() ); ?>
 				</h1>
 
 				<div class="search-results">

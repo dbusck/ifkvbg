@@ -1,3 +1,3 @@
 <aside class="sidebar medium-4 column end">
-	<?php dynamic_sidebar('default'); ?>
+	<?php dynamic_sidebar('news'); ?>
 </aside>
