@@ -9,53 +9,25 @@ Template Name: Partners
 		<?php get_template_part( 'content-hero'); ?>
 	  	
 	  	<div class="content row">
-			<div class="panel medium-8 column">
+			<div class="medium-3 column">
 				<?php
  
 						// check if the repeater field has rows of data
-						if( have_rows('partners') ):
+						if( have_rows('players') ):
 						 
 						 	// loop through the rows of data
-						    while ( have_rows('partners') ) : the_row();
+						    while ( have_rows('players') ) : the_row();
 						 
 						        ?>
-
-						      <h4> 
+						     <img src="<?php the_sub_field('player-image'); ?>" alt="player" />
+						      
 						      	<?php
-						      	 the_sub_field('partners_rubrik');
+						      	 the_sub_field('player-info');
 						      	?>
-						      </h4>
+						      
 						      		<?php
 
 
-
-
- 
-														// check if the repeater field has rows of data
-														if( have_rows('partners_logosection') ):	
-															?>
-
-															<div class="logo-section">
-															
-
-																<?php
-
-														 
-														 	// loop through the rows of data
-														    while ( have_rows('partners_logosection') ) : the_row(); ?>
-																		 
-																<div class="small-6 column"> 
-																	<img src="<?php the_sub_field('partners_logo'); ?>" alt="logo" />
-													 			</div>
-														   <?php endwhile; ?>
-
-														   </div>
-														 		<?php
-														else :
-														 
-														    // no rows found
-														 
-														endif;
 														 
 														
 						 
