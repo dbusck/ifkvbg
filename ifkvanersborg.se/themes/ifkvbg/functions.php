@@ -173,6 +173,16 @@ register_sidebar( array(
 	'after_title' => '</h3>',
 ) );
 
+register_sidebar( array(
+	'name'         => __( 'Framsidopuffar' ),
+	'id'           => 'front-page-blurbs',
+	'description'  => __( 'Sidopanel för nyhetssidor' ),
+	'before_widget' => '<a class="panel blurb medium-6 large-4 column end">',
+	'after_widget' => '</a>',
+	'before_title' => '<div class="positioner"><div class="table"><div class="cell text-center"><h3 class="panel">',
+	'after_title' => '</h3></div></div></div>',
+) );
+
 
 
 

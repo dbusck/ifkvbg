@@ -66,8 +66,9 @@ a {
 	}
 
 .current-menu-item, .current-page-parent, .current_page_parent, .current_page_item, .current_page_ancestor {
-	background:#005191;
 	color:white;
+	background:#005191;
+	border-color:#005191;
 }
 
 	.current-menu-item a, .current-page-parent a, .current_page_parent a, .current_page_item a, .current_page_ancestor a {
@@ -173,7 +174,7 @@ a {
 
 		.news-feed > *:first-child, .twitter-feed > *:first-child,
 		.widget > .caps {
-			margin-bottom:30px;
+			margin-bottom:20px;
 		}
 
 		.latest-tweets:after {

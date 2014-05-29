@@ -93,6 +93,10 @@
 				</a>
 
    		</div>
+
+   		<div class="row">
+   			<?php dynamic_sidebar('front-page-blurbs'); ?>
+   		</div>
       </div>
 
 <?php get_footer(); ?>
