@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Partners
+Template Name: Players
 */
 ?>
 
@@ -22,7 +22,7 @@ Template Name: Partners
 						     <img src="<?php the_sub_field('player-image'); ?>" alt="player" />
 						      
 						      	<?php
-						      	 the_sub_field('player-info');
+						      	 the_sub_field('players-info');
 						      	?>
 						      
 						      		<?php
