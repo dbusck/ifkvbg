@@ -20,6 +20,29 @@ Template Name: Partners
 						 
 						        // display a sub field value
 						        the_sub_field('partners_rubrik');
+
+
+
+
+ 
+														// check if the repeater field has rows of data
+														if( have_rows('partners_logosection') ):
+														 
+														 	// loop through the rows of data
+														    while ( have_rows('partners_logosection') ) : the_row();
+														 
+														        // display a sub field value
+														        the_sub_field('partners_logo');
+														 
+														    endwhile;
+														 
+														else :
+														 
+														    // no rows found
+														 
+														endif;
+														 
+														
 						 
 						    endwhile;
 						 
