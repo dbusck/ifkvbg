@@ -2,6 +2,7 @@
 /*
 Template Name: Partners
 */
+?>
 
 <?php get_header(); ?>
 
