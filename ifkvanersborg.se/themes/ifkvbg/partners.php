@@ -31,8 +31,9 @@ Template Name: Partners
 														 	// loop through the rows of data
 														    while ( have_rows('partners_logosection') ) : the_row(); ?>
 																		 
-																<img src="<?php the_sub_field('partners_logo'); ?>" alt="logo" />
-													 
+																<div class="small-6 medium-3 column"> 
+																	<img src="<?php the_sub_field('partners_logo'); ?>" alt="logo" />
+													 			</div>
 														   <?php endwhile;
 														 
 														else :
