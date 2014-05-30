@@ -12,4 +12,5 @@
 			<?php get_sidebar('news'); ?>
 	  	</div>
 
+<?php get_template_part( 'instagram-feed'); ?>
 <?php get_footer(); ?>

@@ -16,10 +16,10 @@
 		$result = fetchData("https://api.instagram.com/v1/users/527121447/media/recent/?client_id=50a52f06b8d64b4cb310aea76098a981&count=6");
 
 		$result = json_decode($result);
-		foreach ($result->data as $post) {
-			if(!empty($post->caption->text)) {
-				echo '<a class="instagram-image" target="blank" href="'.$post->link.'">
-					<img src="'.$post->images->low_resolution->url.'" alt="'.$post->caption->text.'" width="100%" height="auto" />
+		foreach ($result->data as $instagram) {
+			if(!empty($instagram->caption->text)) {
+				echo '<a class="instagram-image" target="blank" href="'.$instagram->link.'">
+					<img src="'.$instagram->images->low_resolution->url.'" alt="'.$instagram->caption->text.'" width="100%" height="auto" />
 				</a>';
 			}
 		}
