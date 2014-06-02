@@ -178,6 +178,203 @@ register_sidebar( array(
 
 
 
+// Admin customization for client
+
+// Disable the web file editor
+define('DISALLOW_FILE_EDIT', true);
+
+// Remove menu items from admin sidebar
+add_action( 'admin_menu', 'remove_unused_menu_pages' );
+function remove_unused_menu_pages() {
+	        
+	// Keep settings and SEO if admin (checks if user can delete plugins, last cap I would add to a client)
+	if (!current_user_can('delete_plugins')) {
+		remove_menu_page( 'wpseo_dashboard' );
+	}
+	
+    //top level menus
+    //remove_menu_page('edit-comments.php');
+    remove_menu_page('link-manager.php');
+    //remove_menu_page('edit.php');
+
+    //submenus
+    remove_submenu_page( 'themes.php', 'themes.php' );
+    remove_submenu_page( 'tools.php', 'tools.php' );
+}
+
+// Remove menu items in admin bar
+add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
+function remove_admin_bar_links() {
+	global $wp_admin_bar;
+	$wp_admin_bar->remove_menu('wp-logo');
+	$wp_admin_bar->remove_menu('comments');
+	$wp_admin_bar->remove_menu('new-link');
+	//$wp_admin_bar->remove_menu('new-media');
+	$wp_admin_bar->remove_menu('themes');
+	$wp_admin_bar->remove_menu('customize');
+	//$wp_admin_bar->remove_menu('menus');
+	$wp_admin_bar->remove_menu('updates');
+}
+
+
+// Remove admin metaboxes
+add_action( 'admin_menu', 'remove_unused_dashboard_widgets' );
+function remove_unused_dashboard_widgets() {
+	// Remove each dashboard widget metabox for Incoming Links, Plugins, the WordPress Blog and Other WordPress News
+	remove_meta_box('dashboard_incoming_links', 'dashboard', 'normal');
+	remove_meta_box('dashboard_plugins', 'dashboard', 'normal');
+	remove_meta_box('dashboard_primary', 'dashboard', 'normal');
+	remove_meta_box('dashboard_secondary', 'dashboard', 'normal');
+	//remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+	remove_meta_box('postcustom', 'page', 'normal');
+	remove_meta_box('postcustom', 'post', 'normal');
+	remove_meta_box('wpseo_meta', 'post', 'normal');
+}
+
+
+// Add custom caps
+// Only needs to be run once, comment out after
+add_action( 'admin_init', 'add_client_user_caps');
+function add_client_user_caps() {
+    // gets the author role
+    $role = get_role( 'editor' );
+
+    // This only works, because it accesses the class instance.
+    // would allow the author to edit others' posts for current theme only
+    $role->add_cap( 'update_core' );
+    $role->add_cap( 'import' ); 
+    $role->add_cap( 'export' ); 
+    $role->add_cap( 'edit_theme_options' ); 
+    $role->add_cap( 'update_plugins' );
+    $role->remove_cap( 'manage_options' );
+}
+
+
+
+
+
+
+
+
+
+// remove junk from head
+remove_action('wp_head', 'rsd_link');
+remove_action('wp_head', 'wp_generator');
+remove_action('wp_head', 'feed_links', 2);
+remove_action('wp_head', 'index_rel_link');
+remove_action('wp_head', 'wlwmanifest_link');
+remove_action('wp_head', 'feed_links_extra', 3);
+remove_action('wp_head', 'start_post_rel_link', 10, 0);
+remove_action('wp_head', 'parent_post_rel_link', 10, 0);
+remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
+
+
+
+
+
+
+
+//change the menu items label
+! defined( 'ABSPATH' ) and exit; // Not a WordPress context? Stop.
+add_action( 'init', array ( 'chg_post_menu_labels', 'init' ) );
+add_action( 'admin_menu', array ( 'chg_post_menu_labels', 'admin_menu' ) );
+class chg_post_menu_labels
+{
+    public static function init()
+    {
+        global $wp_post_types;
+        $labels = &$wp_post_types['post']->labels;
+        $labels->name = __('Nyheter');
+        $labels->singular_name = __('Nyhet');
+        $labels->add_new = __('Lägg till nyhet');
+        $labels->add_new_item = __('Lägg till nyhet');
+        $labels->edit_item = __('Redigera nyhet');
+        $labels->new_item = __('Lägg till nyhet');
+        $labels->view_item = __('Visa nyheter');
+        $labels->search_items = __('Sök nyheter');
+        $labels->not_found = __('Kunde inte hitta några nyheter');
+        $labels->not_found_in_trash = __('Hittade inga nyheter i papperskorgen');
+        $labels->name_admin_bar = __('Nyhet');
+    }
+
+    public static function admin_menu()
+    {
+        global $menu;
+        global $submenu;
+        $menu[5][0] = __('Nyheter');
+        $submenu['edit.php'][5][0] = __('Nyheter');
+        $submenu['edit.php'][10][0] = __('Lägg till nyhet');
+    }
+}
+    
+
+// Change dashboard footer text
+add_filter('admin_footer_text', 'change_footer_admin');
+function change_footer_admin() {
+	echo 'Sidan gjord av Andrea Eriksson, Douglas Busck, Matilda Salekärr, Julia Thielen & Linnea Morberg – DIG13 Högskolan Väst.';
+}
+
+
+
+
+
+
+//Login page styling
+add_action( 'login_enqueue_scripts', 'IFKVBG_login_styling' );
+function IFKVBG_login_styling() { ?>
+    <style type="text/css">
+        body.login div#login h1 a {
+            background-image: url(<?php echo get_bloginfo( 'template_directory' ) ?>/images/ifk_vbglogo_simpel.png);
+            padding-bottom: 20px;
+            height:105px;
+            width:120px;
+            margin:0 auto;
+            background-size:100px;
+        }
+        body.login {
+        	background: #005191;
+        }
+        body.login #nav a, body.login #backtoblog a {
+        	color:white !important;
+        	text-shadow:none; 
+        }
+        body.login #nav a:hover, body.login #backtoblog a:hover { 
+        	color:black; 
+        }
+        body.login form input.input {
+        	color:white;
+        	background:#005191;
+        	border-radius:0;
+        	border:0;
+        }
+    </style>
+<?php }
+
+// Login logo url
+add_filter( 'login_headerurl', 'client_login_logo_url' );
+function client_login_logo_url() {
+    return get_bloginfo( 'url' );
+}
+
+// Login logo url title
+add_filter( 'login_headertitle', 'client_login_logo_url_title' );
+function client_login_logo_url_title() {
+    return 'IFK Vänersborg';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

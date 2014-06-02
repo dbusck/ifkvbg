@@ -44,6 +44,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	</div>
 <?php endif; // end loop. ?>
 
-<div class="nav page-nav text-center">
-	<?php posts_nav_link(' &#8211; ', '&#171; Föregående sida', 'Nästa sida &#187;'); ?>
+<div class="nav page-nav text-center panel caps">
+	<?php posts_nav_link(' &#8211; ', '<i class="fi-arrow-right"></i> Äldre inlägg', 'Nyare inlägg <i class="fi-arrow-right"></i>'); ?>
 </div>
