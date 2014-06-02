@@ -21,7 +21,7 @@
 <body <?php body_class(); ?>>
 
 	<!--HEADER-->
-	<header class="header clearfix">
+	<header class="header clearfix" id="page-header">
       <div class="row">
 			<a class="skip-link" href="#content" title="Gå till innehåll">Gå till innehåll</a>
 			

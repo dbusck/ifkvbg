@@ -24,7 +24,7 @@
 			endif; ?>
 
 
-	  	<div class="panels-container">
+	  	<div class="panels-container" id="page-content">
 			<div class="row">
 
 				

@@ -117,22 +117,6 @@ h4 {
 		list-style: none;
 	}
 
-.current-menu-item, .current-page-parent, .current_page_parent, .current_page_item, .current_page_ancestor {
-	color:white;
-	background:#005191;
-	border-color:#005191;
-}
-
-	.current-menu-item a, .current-page-parent a, .current_page_parent a, .current_page_item a, .current_page_ancestor a {
-		color:white;
-		background:#005191;
-		border-color:#005191;
-	}
-
-		.current-menu-item.menu-item-has-children a:after, .current-page-parent.menu-item-has-children a:after, .current_page_item.menu-item-has-children a:after, .current_page_ancestor.menu-item-has-children a {
-			border-top-color:white;
-		}
-
 
 .hero-image, .content {
 	position:relative;
@@ -220,7 +204,7 @@ h4 {
 				text-decoration: underline;
 			}
 
-	/*.news-feed,*/ .twitter-feed, .blurb {
+	.sidebar .widget, .twitter-feed, .blurb {
 		position:relative;
 	}
 
@@ -255,6 +239,16 @@ h4 {
 			height:40px;
 		}
 
+		.secondary-menu ul,
+		.secondary-menu ul li {
+			margin:0 !important;
+			padding:0 !important;
+		}
+
+			.secondary-menu ul li.page_item a {
+				padding-left: 2.25rem;
+			}
+
 .instagram-feed .row {
 	padding:0 1px 1px 0;
 	margin-bottom:20px;
@@ -279,6 +273,13 @@ h4 {
 			margin-top:0;
 		}
 
+	.sidebar ul,
+	.widget ul {
+		list-style: none;
+		margin-left:0;
+	}
+
+
 	.sidebar .secondary-menu {
 		margin-bottom:-20px;
 	}
@@ -295,6 +296,23 @@ h4 {
 				border-color:#005191;
 				color:white;
 			}
+
+.current-menu-item, .current-page-parent, .current_page_parent, .current_page_item, .current_page_ancestor {
+	color:white;
+	background:#005191;
+	border-color:#005191;
+}
+
+	.current-menu-item a, .current-page-parent a, .current_page_parent a, .current_page_item a, .current_page_ancestor a {
+		color:white;
+		background:#005191;
+		border-color:#005191 !important;
+	}
+
+		.current-menu-item.menu-item-has-children a:after, .current-page-parent.menu-item-has-children a:after, .current_page_item.menu-item-has-children a:after, .current_page_ancestor.menu-item-has-children a {
+			border-top-color:white;
+		}
+
 
 .tagcloud a {
 	margin:0 5px 0 0;

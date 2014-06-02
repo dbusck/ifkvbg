@@ -9,7 +9,7 @@
 				</h1>
 
 				<div class="search-results">
-					<div class="content">
+					<div class="content" id="page-content">
 						<?php get_template_part( 'content'); ?>
 					</div>
 				</div>

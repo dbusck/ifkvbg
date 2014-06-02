@@ -4,8 +4,8 @@
 
 		<?php get_template_part( 'content-hero'); ?>
 	  	
-	  	<div class="content row collapse">
-			<div class="medium-8 column">
+	  	<div class="content row collapse" id="page-content">
+			<div class="large-8 column">
 				<?php get_template_part( 'content'); ?>
 			</div>
 

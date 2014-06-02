@@ -157,7 +157,7 @@ register_sidebar( array(
 	'name'         => __( 'Sidfot' ),
 	'id'           => 'footer',
 	'description'  => __( 'Widgets som syns i sidfoten. Från början tre stycken, tänkta att vara kontaktinformation.' ),
-	'before_widget' => '<div class="medium-3 column"><ul class="no-bullet">',
+	'before_widget' => '<div class="medium-6 large-3 column"><ul class="no-bullet">',
 	'after_widget' => '</ul></div>',
 	'before_title' => '<h4 class="caps">',
 	'after_title' => '</h4>',
@@ -258,15 +258,8 @@ function add_client_user_caps() {
 
 
 // remove junk from head
-remove_action('wp_head', 'rsd_link');
 remove_action('wp_head', 'wp_generator');
-remove_action('wp_head', 'feed_links', 2);
-remove_action('wp_head', 'index_rel_link');
-remove_action('wp_head', 'wlwmanifest_link');
 remove_action('wp_head', 'feed_links_extra', 3);
-remove_action('wp_head', 'start_post_rel_link', 10, 0);
-remove_action('wp_head', 'parent_post_rel_link', 10, 0);
-remove_action('wp_head', 'adjacent_posts_rel_link', 10, 0);
 
 
 
@@ -369,7 +362,7 @@ add_action( 'admin_head', 'change_admin_bar_home_icon' );
 function change_admin_bar_home_icon() { ?>
 <style type="text/css">
     #wp-admin-bar-site-name > .ab-item:before {
-		content: url(<?php echo get_bloginfo( 'template_directory' ) ?>/images/favicon.png) !important;
+		content: url(<?php echo get_bloginfo( 'template_directory' ) ?>/images/ifk_vbglogo_20px.png) !important;
 		width:20px;
 	}
 </style>

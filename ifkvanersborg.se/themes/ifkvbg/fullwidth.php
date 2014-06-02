@@ -8,7 +8,7 @@ Template Name: Fullbredd
 
 		<?php get_template_part( 'content-hero'); ?>
 	  	
-	  	<div class="content row">
+	  	<div class="content row" id="page-content">
 			<div class="panel">
 				<?php get_template_part( 'content'); ?>
 			</div>

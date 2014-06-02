@@ -1,4 +1,4 @@
-<aside class="sidebar medium-4 column end">
+<aside class="sidebar large-4 column end">
 	<a class="panel tickets button text-center">
 		<h3>Köp biljett &rarr;</h3>
 	</a>
