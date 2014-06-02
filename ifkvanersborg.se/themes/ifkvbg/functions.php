@@ -206,14 +206,14 @@ function remove_unused_menu_pages() {
 add_action( 'wp_before_admin_bar_render', 'remove_admin_bar_links' );
 function remove_admin_bar_links() {
 	global $wp_admin_bar;
-	$wp_admin_bar->remove_menu('wp-logo');
-	$wp_admin_bar->remove_menu('comments');
-	$wp_admin_bar->remove_menu('new-link');
-	//$wp_admin_bar->remove_menu('new-media');
-	$wp_admin_bar->remove_menu('themes');
-	$wp_admin_bar->remove_menu('customize');
-	//$wp_admin_bar->remove_menu('menus');
-	$wp_admin_bar->remove_menu('updates');
+	$wp_admin_bar->remove_node( 'wp-logo' );
+	$wp_admin_bar->remove_node( 'comments' );
+	$wp_admin_bar->remove_node( 'new-link' );
+	//$wp_admin_bar->remove_node( 'new-media' );
+	$wp_admin_bar->remove_node( 'themes' );
+	$wp_admin_bar->remove_node( 'customize' );
+	//$wp_admin_bar->remove_node( 'menus' );
+	$wp_admin_bar->remove_node( 'updates' );
 }
 
 
@@ -350,6 +350,7 @@ function IFKVBG_login_styling() { ?>
     </style>
 <?php }
 
+
 // Login logo url
 add_filter( 'login_headerurl', 'client_login_logo_url' );
 function client_login_logo_url() {
@@ -363,9 +364,16 @@ function client_login_logo_url_title() {
 }
 
 
-
-
-
+add_action('wp_head', 'change_admin_bar_home_icon', 999);
+add_action( 'admin_head', 'change_admin_bar_home_icon' );
+function change_admin_bar_home_icon() { ?>
+<style type="text/css">
+    #wp-admin-bar-site-name > .ab-item:before {
+		content: url(<?php echo get_bloginfo( 'template_directory' ) ?>/images/favicon.png) !important;
+		width:20px;
+	}
+</style>
+<?php }
 
 
 
