@@ -3,7 +3,7 @@
 		<h3>Köp biljett &rarr;</h3>
 	</a>
 	
-	<?php $siblings = wp_list_pages('title_li=&depth=1&child_of='.get_post_top_ancestor_id().'&echo=0');?>
+	<?php $siblings = wp_list_pages('title_li=&depth=2&child_of='.get_post_top_ancestor_id().'&echo=0');?>
 	<?php if ($siblings): ?>
 
 		<nav class="panel widget">

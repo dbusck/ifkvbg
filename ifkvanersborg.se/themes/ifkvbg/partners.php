@@ -20,7 +20,7 @@ Template Name: Partners
 							<div class="partner-logo-section">
 
 							<?php while ( have_rows('partners_logosection') ) : the_row(); 
-								?><div class="partner-logo small-6 column"> 
+								?><div class="partner-logo inline-block small-6 column"> 
 									<img src="<?php the_sub_field('partners_logo'); ?>" alt="logo" />
 								</div><?php 
 							endwhile; 
