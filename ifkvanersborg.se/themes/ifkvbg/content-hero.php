@@ -1,4 +1,4 @@
-<?php if ( has_post_thumbnail() && (!is_category()) ): ?>
+<?php if ( has_post_thumbnail() && (!is_category()) && (!is_home()) ): ?>
 
 	<section class="hero-image">
 		<?php the_post_thumbnail(); ?>

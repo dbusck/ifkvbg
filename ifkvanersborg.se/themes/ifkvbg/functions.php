@@ -174,16 +174,6 @@ register_sidebar( array(
 ) );
 
 
-/*// Adds custom classes to body if sidebar is not present, or if specified templates are used
-add_filter( 'body_class', 'time_body_class' );
-function time_body_class( $classes ) {
-	if ( ! is_active_sidebar( 'Standard höger' ) || is_page_template( 'page-fullwidth.php' ) )
-		$classes[] = 'fullwidth';
-
-	return $classes;
-}*/
-
-
 
 
 

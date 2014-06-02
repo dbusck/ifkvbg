@@ -43,7 +43,8 @@ a {
 }
 
 
-.skip-link {
+.skip-link,
+.screen-reader-text {
 	display: none;
 }
 
@@ -168,7 +169,7 @@ a {
 				text-decoration: underline;
 			}
 
-	.news-feed, .twitter-feed, .blurb,.widget {
+	/*.news-feed,*/ .twitter-feed, .blurb {
 		position:relative;
 	}
 
@@ -484,6 +485,10 @@ a {
 			margin-left:30px;
 		}
 
+		.header .fi-x { 
+			margin-right:2px;
+		}
+
 .search-form-wrapper {
 	background:white;
 	border-bottom:1px solid #ddd;
@@ -510,10 +515,18 @@ a {
 		display:block !important;
 	}
 
-
-.screen-reader-text {
-	display:none;
+/**** PARTNERS ****/
+.partner-logo-section {
+	margin-bottom: 80px;
+	overflow: hidden;
 }
+
+	.partner-logo-section .partner-logo {
+		margin-top:20px;
+		display: inline-block;
+		vertical-align: top;
+		float:none !important;
+	}
 
 
 

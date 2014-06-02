@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Players
+Template Name: Spelare
 */
 ?>
 
@@ -9,40 +9,18 @@ Template Name: Players
 		<?php get_template_part( 'content-hero'); ?>
 	  	
 	  	<div class="content row">
-			<div class="panel medium-8 column">
-				<?php
- 
-						// check if the repeater field has rows of data
-						if( have_rows('players') ):
-						 
-						 	// loop through the rows of data
-						    while ( have_rows('players') ) : the_row();
-						 
-						        ?>
-						     <div class="player medium-3 column">
-						     	<img src="<?php the_sub_field('player-image'); ?>" alt="player" />
-						      
-						      	<?php
-						      	 the_sub_field('players-info');
-						      	?>
-						      </div>
-						      		<?php
-
-
-														 
-														
-						 
-						    endwhile;
-						 
-						else :
-						 
-						    // no rows found
-						 
-						endif;
-						 
-						?>
-
-
+			<div class="players panel medium-8 column">
+				
+				<?php if( have_rows('players') ):
+				    while ( have_rows('players') ) : the_row(); ?>
+						<div class="player medium-3 column">
+							<img src="<?php the_sub_field('player-image'); ?>" alt="player" />
+							<?php the_sub_field('players-info'); ?>
+						</div>
+						
+					<?php endwhile;						 
+				endif; ?>
+				
 				<?php get_template_part( 'content'); ?>
 			</div>
 			<?php get_sidebar(); ?>

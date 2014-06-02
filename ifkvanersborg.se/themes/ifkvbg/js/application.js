@@ -3,6 +3,7 @@ $(document).ready(function() {
 		$(".search-btn").click(function() {
 			$("body").removeClass("menu-open").toggleClass("search-open");
 			$(".search-open .search-form .search-field").focus();
+			$('.search-btn .fi-magnifying-glass').toggleClass('fi-x');
 			return false;
 		});
 
