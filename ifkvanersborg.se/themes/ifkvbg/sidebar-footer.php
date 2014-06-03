@@ -4,7 +4,7 @@
 		<?php dynamic_sidebar( 'footer' ); ?>
 
         <div class="medium-6 large-3 column">
-          <a href="#page-header" class="left">Till toppen &uarr;</a>
+          <a href="#page-header" class="left">Till toppen <i class="fi-arrow-up"></i></a>
           <img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_vbglogo_simpel.png" class="logo right" alt="logo">
         </div>
 

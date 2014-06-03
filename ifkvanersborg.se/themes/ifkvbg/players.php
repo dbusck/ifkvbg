@@ -14,7 +14,9 @@ Template Name: Spelare
 				<?php if( have_rows('players') ):
 					while ( have_rows('players') ) : the_row(); 
 						?><figure class="player inline-block medium-6 large-4 column">
-							<img src="<?php the_sub_field('player-image'); ?>" alt="player" />
+							<div class="player-image">
+								<img src="<?php the_sub_field('player-image'); ?>" alt="player" />
+							</div>
 							<figcaption class="player-description">
 								<?php the_sub_field('players-info'); ?>
 							</figcaption>

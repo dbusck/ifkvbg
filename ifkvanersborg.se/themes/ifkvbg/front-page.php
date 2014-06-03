@@ -54,10 +54,22 @@
 					<h3><?php the_field('biljettkopstext'); ?></h3>
 				</a>
 
+
 				<div class="panel next-game large-4 column end text-center">
-					<h3 class="caps">Nästa match spelas</h4>
-					<h3 class="game-date">4 jun</h3>
-					<h4 class="caps">IFK Vänersborg – Villa</h5>
+					<h3 class="caps">Nästa match spelas</h3>
+					<h3 class="game-date"><?php 
+						$dateformatstring = "j M";
+						$unixtimestamp = strtotime(get_field('next-game-date'));
+						 
+						echo strtolower(date_i18n($dateformatstring, $unixtimestamp)); 
+					?></h3>
+					<h4 class="caps"><?php 
+						if( get_field('field_name') ) : 
+				    		echo 'IFKVBG – '.the_field('opponent');
+						else :
+				    		echo the_field('opponent').' – IFKVBG';
+						endif 
+					?></h4>
 				</div>
 
 			</div>

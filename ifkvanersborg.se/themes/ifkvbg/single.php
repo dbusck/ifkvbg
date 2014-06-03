@@ -5,6 +5,11 @@
 	  	<div class="content row collapse" id="page-content">
 			<div class="large-8 column">
 				<?php get_template_part( 'content'); ?>
+				
+				<!--<div class="comments-section panel">
+					<?php //comments_template(); ?>
+				</div>-->
+
 			</div>
 
 			<?php get_sidebar('news'); ?>

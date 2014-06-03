@@ -14,6 +14,19 @@
 					</div>
 				</div>
 
+			<?php else : ?>
+				<hgroup class="hero-title standalone-title text-center">
+					<h1>
+						Det gick inte att hitta det du sökte efter.
+					</h1>
+					<h2 class="subheader">
+						Testa att söka igen, eller använd menyn för att hitta rätt.
+					</h2>
+				</hgroup>
+
+				<div class="search-results">
+					<?php get_search_form(); ?>
+				</div>
 			<?php endif ?>
 
 	</section><!-- #primary -->

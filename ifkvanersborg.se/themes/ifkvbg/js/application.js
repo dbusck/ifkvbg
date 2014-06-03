@@ -1,3 +1,11 @@
+(function(d, s, id) {
+	var js, fjs = d.getElementsByTagName(s)[0];
+	if (d.getElementById(id)) return;
+	js = d.createElement(s); js.id = id;
+	js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&appId=273167479487244&version=v2.0";
+	fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
 $(document).ready(function() {
 
 		$(".search-btn").click(function() {
@@ -12,6 +20,11 @@ $(document).ready(function() {
 			return false;
 		});
 
+		$('.player').click(function() {
+			$(this).toggleClass('playercard-open');
+			$('.player').not(this).removeClass('playercard-open');
+		});
+
 		$(function() {
 			$('a[href*=#]:not([href=#])').click(function() {
 				if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -20,7 +33,7 @@ $(document).ready(function() {
 					if (target.length) {
 					$('html,body').animate({
 						scrollTop: target.offset().top
-					}, 1000);
+					}, 500);
 					return false;
 					}
 				}

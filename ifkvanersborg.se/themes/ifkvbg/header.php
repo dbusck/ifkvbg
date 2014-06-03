@@ -19,11 +19,12 @@
 <?php flush(); ?>
 
 <body <?php body_class(); ?>>
-
+	<div id="fb-root"></div>
+	
 	<!--HEADER-->
 	<header class="header clearfix" id="page-header">
       <div class="row">
-			<a class="skip-link" href="#content" title="Gå till innehåll">Gå till innehåll</a>
+			<a class="skip-link" href="#page-content" title="Gå till innehåll">Gå till innehåll</a>
 			
 			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="logo left">
 				<img src="<?php bloginfo( 'stylesheet_directory' ); ?>/images/ifk_logo.png" alt="Logo">

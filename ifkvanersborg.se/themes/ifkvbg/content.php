@@ -1,15 +1,15 @@
 <?php // Start the Loop
 if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
-<?php if ( !is_page() ) { ?>
+<?php if ( !is_page() ) : ?>
 <article class="panel post">
-<?php } ?>				
+<?php endif ?>				
 
-	<?php if ( !(is_search()) && !(is_single()) && !(is_page()) && has_post_thumbnail() ) { ?>
+	<?php if ( !(is_search()) && !(is_single()) && !(is_page()) && has_post_thumbnail() ) : ?>
 		<div class="post-header-image">
 			<?php the_post_thumbnail(); ?>
 		</div>
-	<?php }; ?>
+	<?php endif ?>
 	
 		<?php if ( (!is_single()) && !(is_page()) ) : ?>
 			<h2><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
@@ -34,9 +34,9 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<?php the_content();
 		endif; ?>
 
-<?php if ( !is_page() ) { ?>
+<?php if ( !is_page() ) : ?>
 </article>
-<?php }; ?>
+<?php endif ?>
 
 <?php endwhile; else: ?>
 	<div class="content">
@@ -44,8 +44,8 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	</div>
 <?php endif; // end loop. ?>
 
-<?php if (posts_nav_link()) : ?>
+<?php if ( is_home() || is_single() && !(is_page()) ) : ?>
 	<div class="nav page-nav text-center panel caps">
-		<?php posts_nav_link(' &#8211; ', '<i class="fi-arrow-right"></i> Äldre inlägg', 'Nyare inlägg <i class="fi-arrow-right"></i>'); ?>
+		<?php posts_nav_link(' &#8211; ', '<i class="fi-arrow-left"></i> Nyare inlägg', 'Äldre inlägg <i class="fi-arrow-right"></i>'); ?>
 	</div>
 <?php endif ?>
