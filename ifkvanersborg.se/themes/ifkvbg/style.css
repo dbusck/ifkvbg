@@ -443,7 +443,7 @@ h6 {
 				.panels-container .next-game {
 					border-left:0;
 					padding:2.55em 1.875em;
-					height:12.9375em;
+					height:12.875em;
 				}
 
 				.post.panel {
@@ -460,7 +460,7 @@ h6 {
 
 		.panels-container .news-feed, .panels-container .twitter-feed, .panels-container .blurb {
 			overflow:hidden;
-			height:19.375em;
+			height:19.3125em;
 		}
 		
 		.instagram-feed {

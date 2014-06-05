@@ -45,7 +45,7 @@
 				</div>
 
 				<div class="panel news-feed medium-6 large-4 column">
-					<h4 class="caps">Twitter (<a href="https://twitter.com/search?q=%23ifkvaenersborg&src=tyah">@IFKVBG_</a>)</h4>
+					<h4 class="caps">Twitter (<a href="https://twitter.com/IFKVBG_">@IFKVBG_</a>)</h4>
 					<?php the_widget( 'Latest_Tweets_Widget', 'title=&screen_name=IFKVBG_', 'before_title=&after_title='); ?>
 					<div class="curtain"></div>
 				</div>

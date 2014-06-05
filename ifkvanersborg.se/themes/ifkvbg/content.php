@@ -46,6 +46,6 @@ if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 <?php if ( is_home() || is_single() && !(is_page()) ) : ?>
 	<div class="nav page-nav text-center panel caps">
-		<?php posts_nav_link(' &#8211; ', '<i class="fi-arrow-left"></i> Nyare inlägg', 'Äldre inlägg <i class="fi-arrow-right"></i>'); ?>
+		<?php posts_nav_link(' &nbsp; ', '<i class="fi-arrow-left"></i> Nyare inlägg', 'Äldre inlägg <i class="fi-arrow-right"></i>'); ?>
 	</div>
 <?php endif ?>
